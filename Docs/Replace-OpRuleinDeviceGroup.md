@@ -8,21 +8,24 @@ schema: 2.0.0
 # Replace-OpRuleinDeviceGroup
 
 ## SYNOPSIS
+
 {{ Fill in the Synopsis }}
 
 ## SYNTAX
 
-```
+```text
 Replace-OpRuleinDeviceGroup [-OldOpRule] <OpRule> [-NewOpRule] <OpRule> [-DeviceGroup] <DeviceGroup[]>
  [-AssignInActiveState] [-ProgressAction <ActionPreference>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 {{ Fill in the Description }}
 
 ## EXAMPLES
 
 ### Example 1
+
 ```powershell
 PS C:\> {{ Add example code here }}
 ```
@@ -32,6 +35,7 @@ PS C:\> {{ Add example code here }}
 ## PARAMETERS
 
 ### -AssignInActiveState
+
 {{ Fill AssignInActiveState Description }}
 
 ```yaml
@@ -47,6 +51,7 @@ Accept wildcard characters: False
 ```
 
 ### -DeviceGroup
+
 {{ Fill DeviceGroup Description }}
 
 ```yaml
@@ -62,6 +67,7 @@ Accept wildcard characters: False
 ```
 
 ### -NewOpRule
+
 {{ Fill NewOpRule Description }}
 
 ```yaml
@@ -77,6 +83,7 @@ Accept wildcard characters: False
 ```
 
 ### -OldOpRule
+
 {{ Fill OldOpRule Description }}
 
 ```yaml
@@ -92,6 +99,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProgressAction
+
 {{ Fill ProgressAction Description }}
 
 ```yaml
@@ -107,14 +115,17 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### DeviceGroup[]
+
 ## OUTPUTS
 
 ### OpRuleDeviceGroupAssignment
+
 ## NOTES
 
 ## RELATED LINKS

@@ -8,28 +8,32 @@ schema: 2.0.0
 # Remove-DevicefromDeviceGroup
 
 ## SYNOPSIS
+
 Removes a device from a device group
 
 ## SYNTAX
 
-```
+```text
 Remove-DevicefromDeviceGroup [-Device] <Device[]> [-DeviceGroup] <DeviceGroup>
  [-ProgressAction <ActionPreference>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 {{ Fill in the Description }}
 
 ## EXAMPLES
 
-### EXAMPLE 1
-```
+### Example 1
+
+```PowerShell
 Remove-DevicefromDeviceGroup -Device 'VDPKG0011' -DeviceGroup 'APPGRP_Adobe_AcrobatProDC_CUR'
 ```
 
 ## PARAMETERS
 
 ### -Device
+
 The device to remove
 
 ```yaml
@@ -45,6 +49,7 @@ Accept wildcard characters: False
 ```
 
 ### -DeviceGroup
+
 The device group to be removed from.
 
 ```yaml
@@ -60,6 +65,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProgressAction
+
 {{ Fill ProgressAction Description }}
 
 ```yaml
@@ -75,15 +81,19 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### BCMAPI.Device
+
 ### BCMAPI.Object.DeviceGroup
+
 ## OUTPUTS
 
 ## NOTES
+
 If the API call fails due to a bad input, i.e.
 Device doesn't exist, Device Group doesn't exist, Device isn't in the Device Group, the API result will just be blank.
 There will not be an error code returned.

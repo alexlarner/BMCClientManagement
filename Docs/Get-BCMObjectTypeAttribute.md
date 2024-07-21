@@ -8,67 +8,79 @@ schema: 2.0.0
 # Get-BCMObjectTypeAttribute
 
 ## SYNOPSIS
+
 Gathers the attributes for a BCM Object Type
 
 ## SYNTAX
 
 ### All (Default)
-```
+
+```text
 Get-BCMObjectTypeAttribute [-ObjectType] <ObjectType[]> [-ProgressAction <ActionPreference>]
  [<CommonParameters>]
 ```
 
 ### ByID
-```
+
+```text
 Get-BCMObjectTypeAttribute [-ObjectType] <ObjectType[]> [-ID] <Int32[]> [-ProgressAction <ActionPreference>]
  [<CommonParameters>]
 ```
 
 ### ByName
-```
+
+```text
 Get-BCMObjectTypeAttribute [-ObjectType] <ObjectType[]> [-Name] <String[]> [-ProgressAction <ActionPreference>]
  [<CommonParameters>]
 ```
 
 ### ByFrontEndName
-```
+
+```text
 Get-BCMObjectTypeAttribute [-ObjectType] <ObjectType[]> [-FrontEndName] <String[]>
  [-ProgressAction <ActionPreference>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 {{ Fill in the Description }}
 
 ## EXAMPLES
 
-### EXAMPLE 1
-```
+### Example 1
+
+```PowerShell
 Get-BCMObjectTypeAttribute -ObjectType $ObjectType
 ```
 
-### EXAMPLE 2
-```
+### Example 2
+
+```PowerShell
 Get-BCMObjectTypeAttribute -ObjectType $ObjectType -ID 12345
 ```
 
-### EXAMPLE 3
-```
+### Example 3
+
+```PowerShell
 Get-BCMObjectTypeAttribute -ObjectType $ObjectType -Name *Time
 ```
 
-### EXAMPLE 4
-```
+### Example 4
+
+```PowerShell
 Get-BCMObjectTypeAttribute -ObjectType $ObjectType -Name _DB_ATTR_CREATEDBY_
 ```
 
-### EXAMPLE 5
-```
+### Example 5
+
+```PowerShell
 Get-BCMObjectTypeAttribute -ObjectType $ObjectType -FrontEndName 'Created By'
 ```
 
 ## PARAMETERS
 
 ### -ObjectType
+
 The ObjectType object.
 This can be had by using Get-BCMObject.
 If this is the only parameter used, all the attributes for the object type will be returned.
@@ -86,6 +98,7 @@ Accept wildcard characters: False
 ```
 
 ### -ID
+
 The ID of the Object Type Attribute
 This:
 	Is unique to the object and the attribute (i.e.
@@ -106,6 +119,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+
 The front end name (generally the same name as in the GUI) of the Object Type Attribute
 If this parameter is used, the attributes are filtered down AFTER they are converted to ObjectTypeAttribute objects.
 
@@ -122,6 +136,7 @@ Accept wildcard characters: True
 ```
 
 ### -FrontEndName
+
 A description of the FrontEndName parameter.
 
 ```yaml
@@ -137,6 +152,7 @@ Accept wildcard characters: True
 ```
 
 ### -ProgressAction
+
 {{ Fill ProgressAction Description }}
 
 ```yaml
@@ -152,17 +168,23 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### BCMAPI.ObjectType
+
 ### Int
+
 ### String
+
 ## OUTPUTS
 
 ### ObjectTypeAttribute
+
 ## NOTES
+
 This will:
 	Error out if multiple attributes are found when using the ID parameter
 	Give a warning if multiple attributes are found when using the Name or FrontEndName parameter without any wildcards

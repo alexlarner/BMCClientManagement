@@ -8,40 +8,47 @@ schema: 2.0.0
 # Update-OpRuleStepResultCondition
 
 ## SYNOPSIS
+
 Update the result logic of an OpRule step
 
 ## SYNTAX
 
 ### Simple (Default)
-```
+
+```text
 Update-OpRuleStepResultCondition -StepAssignment <StepAssignment[]> -ResultType <String> -Action <String>
  [-ProgressAction <ActionPreference>] [<CommonParameters>]
 ```
 
 ### GoTo
-```
+
+```text
 Update-OpRuleStepResultCondition -StepAssignment <StepAssignment[]> -ResultType <String> -GoToStep <Int32>
  [-ProgressAction <ActionPreference>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 {{ Fill in the Description }}
 
 ## EXAMPLES
 
-### EXAMPLE 1
-```
+### Example 1
+
+```PowerShell
 Update-OpRuleStepResultCondition -StepAssignment $StepAssignment -ResultType Fail -Action Fail
 ```
 
-### EXAMPLE 2
-```
+### Example 2
+
+```PowerShell
 Update-OpRuleStepResultCondition -StepAssignment $StepAssignment -ResultType Success -GoToStep 5
 ```
 
 ## PARAMETERS
 
 ### -StepAssignment
+
 The step assignment to update
 
 ```yaml
@@ -57,6 +64,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResultType
+
 The result logic of the step to update, on "Fail" or on "Success"
 
 ```yaml
@@ -72,6 +80,7 @@ Accept wildcard characters: False
 ```
 
 ### -Action
+
 What to do on step fail or success
 Allowable values are: 'Continue', 'Fail', 'Succeed'
 
@@ -88,6 +97,7 @@ Accept wildcard characters: False
 ```
 
 ### -GoToStep
+
 The step to go to on fail or success
 
 ```yaml
@@ -103,6 +113,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProgressAction
+
 {{ Fill ProgressAction Description }}
 
 ```yaml
@@ -118,13 +129,17 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### BCMAPI.StepAssignment
+
 ### Int
+
 ### String
+
 ## OUTPUTS
 
 ## NOTES

@@ -8,38 +8,44 @@ schema: 2.0.0
 # Write-Log
 
 ## SYNOPSIS
+
 Write a timestamped message to a log and outputs the same message to the select output stream
 
 ## SYNTAX
 
-```
+```text
 Write-Log [-Message] <String> -LogFile <String> [-Stream <String>] [-ErrorAs <String>]
  [-ProgressAction <ActionPreference>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 {{ Fill in the Description }}
 
 ## EXAMPLES
 
-### EXAMPLE 1
-```
+### Example 1
+
+```PowerShell
 Write-Log -Message 'Installed application' -LogFile 'C:\ProgramData\Media\Logs\Sample_Install.log'
 ```
 
-### EXAMPLE 2
-```
+### Example 2
+
+```PowerShell
 Write-Log -Message 'Failed to find file' -LogFile 'C:\ProgramData\Media\Logs\Sample_Install.log' -Stream Error
 ```
 
-### EXAMPLE 3
-```
+### Example 3
+
+```PowerShell
 Write-Log -Message 'Failed to copy folder' -LogFile 'C:\ProgramData\Media\Logs\Sample_Install.log' -Stream Error -ErrorAs Warning
 ```
 
 ## PARAMETERS
 
 ### -Message
+
 The body of the error message
 
 ```yaml
@@ -55,6 +61,7 @@ Accept wildcard characters: False
 ```
 
 ### -LogFile
+
 The path to the log file.
 The file must already exist.
 
@@ -71,6 +78,7 @@ Accept wildcard characters: False
 ```
 
 ### -Stream
+
 The PowerShell output stream.
 Allowable values are 'Success', 'Error', 'Warning', 'Verbose', 'Debug', 'Information'.
 
@@ -87,6 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### -ErrorAs
+
 How you want the error to be formmated.
 Allowable values are 'Error', 'Throw', 'Warning'
 
@@ -103,6 +112,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProgressAction
+
 {{ Fill ProgressAction Description }}
 
 ```yaml
@@ -118,6 +128,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS

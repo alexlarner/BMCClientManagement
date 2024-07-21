@@ -8,33 +8,38 @@ schema: 2.0.0
 # Add-DeviceGrouptoOpRule
 
 ## SYNOPSIS
+
 Adds a device group to an operational rule
 
 ## SYNTAX
 
-```
+```text
 Add-DeviceGrouptoOpRule [-DeviceGroup] <DeviceGroup[]> [-OpRule] <OpRule> [-Active]
  [-ProgressAction <ActionPreference>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 {{ Fill in the Description }}
 
 ## EXAMPLES
 
-### EXAMPLE 1
-```
+### Example 1
+
+```PowerShell
 Add-DeviceGrouptoOpRule -DeviceGroup "APPGRP_$ShortCompanyName_WindowsPathEnumerate_CUR" -OpRule "OPRULE_$ShortCompanyName_WindowsPathEnumerate_R1"
 ```
 
-### EXAMPLE 2
-```
+### Example 2
+
+```PowerShell
 Add-DeviceGrouptoOpRule -DeviceGroup 'APPGRP_JTS_UnquotedPathsFix_CUR' -OpRule 'OPRULE_JTS_UnquotedPathsFix_R1' -Active
 ```
 
 ## PARAMETERS
 
 ### -DeviceGroup
+
 The device group to use
 
 ```yaml
@@ -50,6 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -OpRule
+
 The operational rule to use
 
 ```yaml
@@ -65,6 +71,7 @@ Accept wildcard characters: False
 ```
 
 ### -Active
+
 This adds the device group to the OpRule in an active state, elsewise the device group is assigned in a paused state.
 
 ```yaml
@@ -80,6 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProgressAction
+
 {{ Fill ProgressAction Description }}
 
 ```yaml
@@ -95,15 +103,19 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### BCMAPI.Object.DeviceGroup
+
 ### BCMAPI.Object.OpRule
+
 ## OUTPUTS
 
 ## NOTES
+
 01.20.2021 - Alex Larner - Updated to set new assignment to upload status after every execution
 
 ## RELATED LINKS

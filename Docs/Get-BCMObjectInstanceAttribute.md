@@ -8,33 +8,38 @@ schema: 2.0.0
 # Get-BCMObjectInstanceAttribute
 
 ## SYNOPSIS
+
 Gathers the attributes of a particular instance of an object type
 
 ## SYNTAX
 
-```
+```text
 Get-BCMObjectInstanceAttribute [-ObjectType] <ObjectType> [-InstanceID] <Int32>
  [[-TranslateBackendNames] <Boolean>] [-ProgressAction <ActionPreference>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 {{ Fill in the Description }}
 
 ## EXAMPLES
 
-### EXAMPLE 1
-```
+### Example 1
+
+```PowerShell
 Get-BCMObjectInstanceAttribute -ObjectType $OpRuleObjectType -InstanceID $InstanceID
 ```
 
-### EXAMPLE 2
-```
+### Example 2
+
+```PowerShell
 Get-BCMObjectInstanceAttribute -ObjectType $OpRuleObjectType -InstanceID $InstanceID -TranslateBackendNames $false
 ```
 
 ## PARAMETERS
 
 ### -ObjectType
+
 The ObjectType to use
 
 ```yaml
@@ -50,6 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -InstanceID
+
 The ID of the particular object
 
 ```yaml
@@ -65,6 +71,7 @@ Accept wildcard characters: False
 ```
 
 ### -TranslateBackendNames
+
 Translates the backend names of the properties (using Get-BCMFrontEndText) to their front-end names and adds them as alias properties for the backend names
 
 ```yaml
@@ -80,6 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProgressAction
+
 {{ Fill ProgressAction Description }}
 
 ```yaml
@@ -95,13 +103,17 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### BCMAPI.ObjectType
+
 ### Bool
+
 ### Int
+
 ## OUTPUTS
 
 ## NOTES

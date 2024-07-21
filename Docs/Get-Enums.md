@@ -8,27 +8,31 @@ schema: 2.0.0
 # Get-Enums
 
 ## SYNOPSIS
+
 Get enumerators in a BCM enumerator group
 
 ## SYNTAX
 
-```
+```text
 Get-Enums [-EnumGroup] <String> [-ProgressAction <ActionPreference>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 {{ Fill in the Description }}
 
 ## EXAMPLES
 
-### EXAMPLE 1
-```
+### Example 1
+
+```PowerShell
 Get-Enums -EnumGroup 'TimeStep'
 ```
 
 ## PARAMETERS
 
 ### -EnumGroup
+
 The name of the enum groups.
 All enum groups can be listed with (Use-BCMRestAPI "/enum/groups").groups
 
@@ -45,6 +49,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProgressAction
+
 {{ Fill ProgressAction Description }}
 
 ```yaml
@@ -60,14 +65,17 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### String
+
 ## OUTPUTS
 
 ### System.String
+
 ## NOTES
 
 ## RELATED LINKS

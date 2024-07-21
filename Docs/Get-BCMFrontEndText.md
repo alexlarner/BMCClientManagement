@@ -8,33 +8,38 @@ schema: 2.0.0
 # Get-BCMFrontEndText
 
 ## SYNOPSIS
+
 Translates the BCM backend text to the GUI front-end text
 
 ## SYNTAX
 
-```
+```text
 Get-BCMFrontEndText [-BackendText] <String[]> [-TranslationOnly] [-ProgressAction <ActionPreference>]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 {{ Fill in the Description }}
 
 ## EXAMPLES
 
-### EXAMPLE 1
-```
+### Example 1
+
+```PowerShell
 Get-BCMFrontEndText -BackendText '_DB_OBJECTTYPE_OPERATIONALRULE_'
 ```
 
-### EXAMPLE 2
-```
+### Example 2
+
+```PowerShell
 Get-BCMFrontEndText -BackendText '_DB_OBJECTTYPE_OPERATIONALRULE_' -TranslationOnly
 ```
 
 ## PARAMETERS
 
 ### -BackendText
+
 The back end text that you want to translate
 
 ```yaml
@@ -50,6 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -TranslationOnly
+
 Returns just a string or array of strings with the front-end text
 By default, the API returns an object with the backend text as the property name and the front-end text
 
@@ -66,6 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProgressAction
+
 {{ Fill ProgressAction Description }}
 
 ```yaml
@@ -81,15 +88,19 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### System.String
+
 ## OUTPUTS
 
 ### System.String
+
 ### System.Management.Automation.PSObject
+
 ## NOTES
 
 ## RELATED LINKS

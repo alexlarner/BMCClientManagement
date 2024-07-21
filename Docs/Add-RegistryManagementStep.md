@@ -8,6 +8,7 @@ schema: 2.0.0
 # Add-RegistryManagementStep
 
 ## SYNOPSIS
+
 Adds a registry management step
 
 PARAMETER OpRule
@@ -15,65 +16,76 @@ The OpRule to add the step to
 
 ## SYNTAX
 
-```
+```text
 Add-RegistryManagementStep -OpRule <OpRule> -Key <String> [-Operation <String>] [-ValueName <String>]
  [-Value <String>] [-ValueType <String>] [-BinaryValueInHexFormat] [-OnFail <String>] [-OnSuccess <String>]
  [-Notes <String>] [-ProgressAction <ActionPreference>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 {{ Fill in the Description }}
 
 ## EXAMPLES
 
-### EXAMPLE 1
-```
+### Example 1
+
+```PowerShell
 Add-RegistryManagementStep -OpRule 'OPRULE_Alex_RESTAPI-Test_R1' -Key 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\OPRULE_Alex_RESTAPI-Test'
 ```
 
-### EXAMPLE 2
-```
+### Example 2
+
+```PowerShell
 Add-RegistryManagementStep -OpRule 'OPRULE_Alex_RESTAPI-Test_R1' -Key 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\OPRULE_Alex_RESTAPI-Test' -Operation Delete
 ```
 
-### EXAMPLE 3
-```
+### Example 3
+
+```PowerShell
 Add-RegistryManagementStep -OpRule 'OPRULE_Alex_RESTAPI-Test_R1' -Key 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\OPRULE_Alex_RESTAPI-Test' -OnFail Continue
 ```
 
-### EXAMPLE 4
-```
+### Example 4
+
+```PowerShell
 Add-RegistryManagementStep -OpRule 'OPRULE_Alex_RESTAPI-Test_R1' -Key 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\OPRULE_Alex_RESTAPI-Test' -OnSuccess Fail
 ```
 
-### EXAMPLE 5
-```
+### Example 5
+
+```PowerShell
 Add-RegistryManagementStep -OpRule 'OPRULE_Alex_RESTAPI-Test_R1' -Key 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\OPRULE_Alex_RESTAPI-Test' -Notes 'This step made by the API'
 ```
 
-### EXAMPLE 6
-```
+### Example 6
+
+```PowerShell
 Add-RegistryManagementStep -OpRule 'OPRULE_Alex_RESTAPI-Test_R1' -Key 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\OPRULE_Alex_RESTAPI-Test' -ValueName 'DisplayName'
 ```
 
-### EXAMPLE 7
-```
+### Example 7
+
+```PowerShell
 Add-RegistryManagementStep -OpRule 'OPRULE_Alex_RESTAPI-Test_R1' -Key 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\OPRULE_Alex_RESTAPI-Test' -ValueName 'UninstallString' -Value 'cmd.exe /c'
 ```
 
-### EXAMPLE 8
-```
+### Example 8
+
+```PowerShell
 Add-RegistryManagementStep -OpRule 'OPRULE_Alex_RESTAPI-Test_R1' -Key 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\OPRULE_Alex_RESTAPI-Test' -ValueName 'UninstallString' -Value '12345' -ValueType 'DWORD'
 ```
 
-### EXAMPLE 9
-```
+### Example 9
+
+```PowerShell
 Add-RegistryManagementStep -OpRule 'OPRULE_Alex_RESTAPI-Test_R1' -Key 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\OPRULE_Alex_RESTAPI-Test' -ValueName 'UninstallString' -Value '0' -ValueType 'Binary' -BinaryValueInHexFormat
 ```
 
 ## PARAMETERS
 
 ### -OpRule
+
 {{ Fill OpRule Description }}
 
 ```yaml
@@ -89,6 +101,7 @@ Accept wildcard characters: False
 ```
 
 ### -Key
+
 The full registry key path
 
 ```yaml
@@ -104,6 +117,7 @@ Accept wildcard characters: False
 ```
 
 ### -Operation
+
 The registry key operation to do
 Allowable values are: 'Add/Modify', 'Delete'
 
@@ -120,6 +134,7 @@ Accept wildcard characters: False
 ```
 
 ### -ValueName
+
 The value name for the registry key property
 If this is left blank, the step needs to be opened in the GUI, and the sample text deleted, because the API does not properly set a blank value.
 
@@ -136,6 +151,7 @@ Accept wildcard characters: False
 ```
 
 ### -Value
+
 The value for the registry key property
 If this is left blank, the step needs to be opened in the GUI, and the sample text deleted, because the API does not properly set a blank value.
 
@@ -152,6 +168,7 @@ Accept wildcard characters: False
 ```
 
 ### -ValueType
+
 The type of the registry key value.
 Allowable values are: 'String', 'Binary', 'DWORD', 'ExpandableString', 'Multi-String', 'QWORD'
 
@@ -168,6 +185,7 @@ Accept wildcard characters: False
 ```
 
 ### -BinaryValueInHexFormat
+
 Formats the binary value in hex notation
 
 ```yaml
@@ -183,6 +201,7 @@ Accept wildcard characters: False
 ```
 
 ### -OnFail
+
 What to do if the step fails
 Allowable values are: 'Continue', 'Fail', 'Succeed'
 
@@ -199,6 +218,7 @@ Accept wildcard characters: False
 ```
 
 ### -OnSuccess
+
 What to do if the step succeeds
 Allowable values are: 'Continue', 'Fail', 'Succeed'
 
@@ -215,6 +235,7 @@ Accept wildcard characters: False
 ```
 
 ### -Notes
+
 The notes to add to the step
 
 ```yaml
@@ -230,6 +251,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProgressAction
+
 {{ Fill ProgressAction Description }}
 
 ```yaml
@@ -245,15 +267,19 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### BCMAPI.Object.OpRule
+
 ### String
+
 ## OUTPUTS
 
 ### StepAssignment
+
 ## NOTES
 
 ## RELATED LINKS

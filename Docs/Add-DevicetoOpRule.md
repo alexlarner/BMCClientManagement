@@ -8,33 +8,38 @@ schema: 2.0.0
 # Add-DevicetoOpRule
 
 ## SYNOPSIS
+
 Add a device to an OpRule
 
 ## SYNTAX
 
-```
+```text
 Add-DevicetoOpRule [-Device] <Device[]> [-OpRule] <OpRule> [-Active] [-ProgressAction <ActionPreference>]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 {{ Fill in the Description }}
 
 ## EXAMPLES
 
-### EXAMPLE 1
-```
+### Example 1
+
+```PowerShell
 Add-DevicetoOpRule -Device 'VDPKG0010' -OpRule 'OPRULE_JET_JETTools_R1'
 ```
 
-### EXAMPLE 2
-```
+### Example 2
+
+```PowerShell
 Add-DevicetoOpRule -Device 'VDPKG0011' -OpRule 'OPRULE_JTS_CStools_R4' -Active
 ```
 
 ## PARAMETERS
 
 ### -Device
+
 The device to use
 
 ```yaml
@@ -50,6 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -OpRule
+
 The operational rule to use
 
 ```yaml
@@ -65,6 +71,7 @@ Accept wildcard characters: False
 ```
 
 ### -Active
+
 This adds the device to the OpRule in an active state, elsewise the device is assigned in a paused state.
 If this is chosen and the device is already assigned to the OpRule, the OpRule will be reassigned to the device
 
@@ -81,6 +88,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProgressAction
+
 {{ Fill ProgressAction Description }}
 
 ```yaml
@@ -96,6 +104,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS

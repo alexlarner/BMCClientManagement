@@ -8,55 +8,65 @@ schema: 2.0.0
 # Get-OpRuleStep
 
 ## SYNOPSIS
+
 Gathers the steps assigned to an OpRule
 
 ## SYNTAX
 
 ### All (Default)
-```
+
+```text
 Get-OpRuleStep [-OpRule] <OpRule[]> [-RawResult] [-ProgressAction <ActionPreference>] [<CommonParameters>]
 ```
 
 ### ByNumber
-```
+
+```text
 Get-OpRuleStep [-OpRule] <OpRule[]> [-RawResult] [[-StepNumber] <Int32[]>] [-ProgressAction <ActionPreference>]
  [<CommonParameters>]
 ```
 
 ### Last
-```
+
+```text
 Get-OpRuleStep [-OpRule] <OpRule[]> [-RawResult] [-LastStep] [-ProgressAction <ActionPreference>]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 A detailed description of the Get-OpRuleStep function.
 
 ## EXAMPLES
 
-### EXAMPLE 1
-```
+### Example 1
+
+```PowerShell
 Get-OpRuleStep -OpRule OPRULE_Adobe_AcrobatProDC_R3
 ```
 
-### EXAMPLE 2
-```
+### Example 2
+
+```PowerShell
 Get-OpRuleStep -OpRule OPRULE_Adobe_AcrobatProDC_R3 -RawResult
 ```
 
-### EXAMPLE 3
-```
+### Example 3
+
+```PowerShell
 Get-OpRuleStep -OpRule OPRULE_Adobe_AcrobatProDC_R3 -StepNumber 1,5,7
 ```
 
-### EXAMPLE 4
-```
+### Example 4
+
+```PowerShell
 Get-OpRuleStep -OpRule OPRULE_Adobe_Reader_R25 -LastStep
 ```
 
 ## PARAMETERS
 
 ### -OpRule
+
 The OpRule to gather the steps of
 
 ```yaml
@@ -72,6 +82,7 @@ Accept wildcard characters: False
 ```
 
 ### -RawResult
+
 A description of the RawResult parameter.
 
 ```yaml
@@ -87,6 +98,7 @@ Accept wildcard characters: False
 ```
 
 ### -StepNumber
+
 A description of the StepNumber parameter.
 
 ```yaml
@@ -102,6 +114,7 @@ Accept wildcard characters: False
 ```
 
 ### -LastStep
+
 A description of the LastStep parameter.
 
 ```yaml
@@ -117,6 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProgressAction
+
 {{ Fill ProgressAction Description }}
 
 ```yaml
@@ -132,6 +146,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -139,7 +154,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### StepAssignment
+
 ## NOTES
+
 Additional information about the function.
 
 ## RELATED LINKS

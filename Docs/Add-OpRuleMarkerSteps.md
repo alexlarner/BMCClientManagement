@@ -8,27 +8,31 @@ schema: 2.0.0
 # Add-OpRuleMarkerSteps
 
 ## SYNOPSIS
+
 Adds the steps for the registry keys for the OpRule markers in Programs & Features
 
 ## SYNTAX
 
-```
+```text
 Add-OpRuleMarkerSteps [-OpRule] <OpRule[]> [-ProgressAction <ActionPreference>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 {{ Fill in the Description }}
 
 ## EXAMPLES
 
-### EXAMPLE 1
-```
+### Example 1
+
+```PowerShell
 Add-OpRuleMarkerSteps -OpRule 'OPRULE_Alex_RESTAPI-Test_R1'
 ```
 
 ## PARAMETERS
 
 ### -OpRule
+
 The OpRule to add the steps to
 
 ```yaml
@@ -44,6 +48,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProgressAction
+
 {{ Fill ProgressAction Description }}
 
 ```yaml
@@ -59,11 +64,13 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### BCMAPI.Object.OpRule
+
 ## OUTPUTS
 
 ## NOTES

@@ -8,15 +8,17 @@ schema: 2.0.0
 # Get-DeviceID
 
 ## SYNOPSIS
+
 Gets the ID of a device, given the device name
 
 ## SYNTAX
 
-```
+```text
 Get-DeviceID [-Name] <String[]> [-ProgressAction <ActionPreference>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 Looks up the device by the name
 if more than one result is returned, the deprecated devices are filtered out
 Errors out if multiple or no non-deprecated devices are found
@@ -27,14 +29,16 @@ Errors out if multiple or no possible IDs are found
 
 ## EXAMPLES
 
-### EXAMPLE 1
-```
+### Example 1
+
+```PowerShell
 Get-DeviceID -Name 'VDPKG0001'
 ```
 
 ## PARAMETERS
 
 ### -Name
+
 The full name of the device
 
 ```yaml
@@ -50,6 +54,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProgressAction
+
 {{ Fill ProgressAction Description }}
 
 ```yaml
@@ -65,14 +70,17 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### System.String
+
 ## OUTPUTS
 
 ### System.Int
+
 ## NOTES
 
 ## RELATED LINKS

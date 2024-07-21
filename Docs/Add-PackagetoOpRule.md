@@ -8,38 +8,44 @@ schema: 2.0.0
 # Add-PackagetoOpRule
 
 ## SYNOPSIS
+
 Adds a package to an OpRule
 
 ## SYNTAX
 
-```
+```text
 Add-PackagetoOpRule [-Package] <Package[]> [-OpRule] <OpRule> [[-OnSuccess] <String>] [[-OnFail] <String>]
  [-ProgressAction <ActionPreference>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 {{ Fill in the Description }}
 
 ## EXAMPLES
 
-### EXAMPLE 1
-```
+### Example 1
+
+```PowerShell
 Add-PackagetoOpRule -Package 'PKG_OpenText_Exstream_16-3-5_R1.cst' -OpRule 'OPRULE_OpenText_Exstream_R4'
 ```
 
-### EXAMPLE 2
-```
+### Example 2
+
+```PowerShell
 Add-PackagetoOpRule -Package 'PKG_OpenText_Exstream_16-3-5_R1.cst' -OpRule 'OPRULE_OpenText_Exstream_R4' -OnSuccess 'Fail'
 ```
 
-### EXAMPLE 3
-```
+### Example 3
+
+```PowerShell
 Add-PackagetoOpRule -Package 'PKG_OpenText_Exstream_16-3-5_R1.cst' -OpRule 'OPRULE_OpenText_Exstream_R4' -OnFail 'Continue'
 ```
 
 ## PARAMETERS
 
 ### -Package
+
 The package to add
 If adding by name, make sure to include the extension ('.cst' or '.msi') in the name
 
@@ -56,6 +62,7 @@ Accept wildcard characters: False
 ```
 
 ### -OpRule
+
 The OpRule to add the packages to
 
 ```yaml
@@ -71,6 +78,7 @@ Accept wildcard characters: False
 ```
 
 ### -OnSuccess
+
 What to do if the step succeeds
 Allowable values are: 'Continue', 'Fail', 'Succeed'
 
@@ -87,6 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### -OnFail
+
 What to do if the step fails
 Allowable values are: 'Continue', 'Fail', 'Succeed'
 
@@ -103,6 +112,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProgressAction
+
 {{ Fill ProgressAction Description }}
 
 ```yaml
@@ -118,6 +128,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS

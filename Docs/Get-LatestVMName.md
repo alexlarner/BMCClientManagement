@@ -8,29 +8,33 @@ schema: 2.0.0
 # Get-LatestVMName
 
 ## SYNOPSIS
+
 Gets the highest numbered VMName matching a specified regex pattern
 
 ## SYNTAX
 
-```
+```text
 Get-LatestVMName [-RegexPattern] <Regex> [-ProgressAction <ActionPreference>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 Gathers all the devices in BMC & vSphere
 Filters them down by the regex
 If the latest VM names don't match between BCM & vSphere, a warning is generated and a factory alert is sent, then the highest VM name of the two is chosen
 
 ## EXAMPLES
 
-### EXAMPLE 1
-```
+### Example 1
+
+```PowerShell
 Get-LatestVMName -RegexPattern $FactoryVMNameRegex
 ```
 
 ## PARAMETERS
 
 ### -RegexPattern
+
 The regex to filter the machine names with
 
 ```yaml
@@ -46,6 +50,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProgressAction
+
 {{ Fill ProgressAction Description }}
 
 ```yaml
@@ -61,14 +66,17 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### Regex
+
 ## OUTPUTS
 
 ### System.String
+
 ## NOTES
 
 ## RELATED LINKS

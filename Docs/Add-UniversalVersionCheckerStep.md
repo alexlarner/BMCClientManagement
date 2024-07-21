@@ -8,64 +8,75 @@ schema: 2.0.0
 # Add-UniversalVersionCheckerStep
 
 ## SYNOPSIS
+
 Adds an execute program step with the run command for the Universal Version Checker
 
 ## SYNTAX
 
-```
+```text
 Add-UniversalVersionCheckerStep [-OpRule] <OpRule> [[-VersionCheckerRevision] <Int32>] [-FiletoCheck] <String>
  [-VersionNumber] <String> [[-VersionType] <String>] [-ReplaceComma] [-ForcePath] [[-OnFail] <String>]
  [[-OnSuccess] <String>] [[-Notes] <String>] [-ProgressAction <ActionPreference>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 {{ Fill in the Description }}
 
 ## EXAMPLES
 
-### EXAMPLE 1
-```
+### Example 1
+
+```PowerShell
 Add-UniversalVersionCheckerStep -OpRule 'OPRULE_Adobe_Reader_R27' -VersionCheckerRevision '10' -FiletoCheck 'C:\Program Files (x86)\Adobe\Acrobat Reader DC\Reader\AcroRd32.exe' -VersionNumber '15.7.20033.133275'
 ```
 
-### EXAMPLE 2
-```
+### Example 2
+
+```PowerShell
 Add-UniversalVersionCheckerStep -OpRule 'OPRULE_Adobe_Reader_R27' -VersionCheckerRevision '10' -FiletoCheck 'C:\Program Files (x86)\Adobe\Acrobat Reader DC\Reader\AcroRd32.exe' -VersionNumber '1.2.3.4' -VersionType 'FileVersionRaw'
 ```
 
-### EXAMPLE 3
-```
+### Example 3
+
+```PowerShell
 Add-UniversalVersionCheckerStep -OpRule 'OPRULE_Adobe_Reader_R27' -VersionCheckerRevision '10' -FiletoCheck 'C:\Program Files (x86)\Adobe\Acrobat Reader DC\Reader\AcroRd32.exe' -VersionNumber '15.7.20033.133275' -ReplaceComma
 ```
 
-### EXAMPLE 4
-```
+### Example 4
+
+```PowerShell
 Add-UniversalVersionCheckerStep -OpRule 'OPRULE_Adobe_Reader_R27' -VersionCheckerRevision '10' -FiletoCheck 'C:\Program Files (x86)\Adobe\Acrobat Reader DC\Reader\AcroRd32.exe' -VersionNumber '15.7.20033.133275' -ForcePath
 ```
 
-### EXAMPLE 5
-```
+### Example 5
+
+```PowerShell
 Add-UniversalVersionCheckerStep -OpRule 'OPRULE_Adobe_Reader_R27' -VersionCheckerRevision '10' -FiletoCheck 'C:\Program Files (x86)\Adobe\Acrobat Reader DC\Reader\AcroRd32.exe' -VersionNumber '15.7.20033.133275' -ForcePath
 ```
 
-### EXAMPLE 6
-```
+### Example 6
+
+```PowerShell
 Add-UniversalVersionCheckerStep -OpRule 'OPRULE_Adobe_Reader_R27' -VersionCheckerRevision '10' -FiletoCheck 'C:\Program Files (x86)\Adobe\Acrobat Reader DC\Reader\AcroRd32.exe' -VersionNumber '15.7.20033.133275' -OnFail 'Continue'
 ```
 
-### EXAMPLE 7
-```
+### Example 7
+
+```PowerShell
 Add-UniversalVersionCheckerStep -OpRule 'OPRULE_Adobe_Reader_R27' -VersionCheckerRevision '10' -FiletoCheck 'C:\Program Files (x86)\Adobe\Acrobat Reader DC\Reader\AcroRd32.exe' -VersionNumber '15.7.20033.133275' -OnSuccess 'Fail'
 ```
 
-### EXAMPLE 8
-```
+### Example 8
+
+```PowerShell
 Add-UniversalVersionCheckerStep -OpRule 'OPRULE_Adobe_Reader_R27' -VersionCheckerRevision '10' -FiletoCheck 'C:\Program Files (x86)\Adobe\Acrobat Reader DC\Reader\AcroRd32.exe' -VersionNumber '15.7.20033.133275' -Notes 'Made with BCM Rest API'
 ```
 
 ## PARAMETERS
 
 ### -OpRule
+
 The OpRule to add the step to
 
 ```yaml
@@ -81,6 +92,7 @@ Accept wildcard characters: False
 ```
 
 ### -VersionCheckerRevision
+
 The revision number of the universal version checker
 
 ```yaml
@@ -96,6 +108,7 @@ Accept wildcard characters: False
 ```
 
 ### -FiletoCheck
+
 The path of the file to do the version check on
 
 ```yaml
@@ -111,6 +124,7 @@ Accept wildcard characters: False
 ```
 
 ### -VersionNumber
+
 The version number for the version check
 
 ```yaml
@@ -126,6 +140,7 @@ Accept wildcard characters: False
 ```
 
 ### -VersionType
+
 The version property on the file object (from "(Get-ItemProperty $FilePath).VersionInfo") to check off of.
 Allowable values: 'FileVersion', 'ProductVersion', 'FileVersionRaw', 'ProductVersionRaw'
 
@@ -142,6 +157,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReplaceComma
+
 If the file's version number uses commas instead of periods, use this for replace them so the version number can be recognized as a version number object
 
 ```yaml
@@ -157,6 +173,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForcePath
+
 This forces the file to only be looked for in the path specified.
 By default the version checker looks for the file in both "Program Files" & "Program Files (x86)"
 
@@ -173,6 +190,7 @@ Accept wildcard characters: False
 ```
 
 ### -OnFail
+
 What to do if the step fails
 Allowable values are: 'Continue', 'Fail', 'Succeed'
 
@@ -189,6 +207,7 @@ Accept wildcard characters: False
 ```
 
 ### -OnSuccess
+
 What to do if the step succeeds
 Allowable values are: 'Continue', 'Fail', 'Succeed'
 
@@ -205,6 +224,7 @@ Accept wildcard characters: False
 ```
 
 ### -Notes
+
 The notes to add to the step
 
 ```yaml
@@ -220,6 +240,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProgressAction
+
 {{ Fill ProgressAction Description }}
 
 ```yaml
@@ -235,6 +256,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS

@@ -8,11 +8,12 @@ schema: 2.0.0
 # Add-ExecuteProgramStep
 
 ## SYNOPSIS
+
 Add an execute program step to an OpRule
 
 ## SYNTAX
 
-```
+```text
 Add-ExecuteProgramStep [-OpRule] <OpRule> [-RunCommand] <String> [[-WaitforEndofExecution] <Boolean>]
  [[-BackgroundMode] <Boolean>] [[-RunProgramInItsContext] <Boolean>] [[-ValidReturnCodes] <Int32[]>]
  [[-UseAShell] <Boolean>] [[-OnFail] <String>] [[-OnSuccess] <String>] [[-Notes] <String>]
@@ -20,58 +21,69 @@ Add-ExecuteProgramStep [-OpRule] <OpRule> [-RunCommand] <String> [[-WaitforEndof
 ```
 
 ## DESCRIPTION
+
 {{ Fill in the Description }}
 
 ## EXAMPLES
 
-### EXAMPLE 1
-```
+### Example 1
+
+```PowerShell
 Add-ExecuteProgramStep -OpRule 'OPRULE_Alex_RESTAPI-Test_R1' -RunCommand 'notepad'
 ```
 
-### EXAMPLE 2
-```
+### Example 2
+
+```PowerShell
 Add-ExecuteProgramStep -OpRule 'OPRULE_Alex_RESTAPI-Test_R1' -RunCommand 'notepad' -WaitforEndofExecution $false
 ```
 
-### EXAMPLE 3
-```
+### Example 3
+
+```PowerShell
 Add-ExecuteProgramStep -OpRule 'OPRULE_Alex_RESTAPI-Test_R1' -RunCommand 'notepad' -BackgroundMode $false
 ```
 
-### EXAMPLE 4
-```
+### Example 4
+
+```PowerShell
 Add-ExecuteProgramStep -OpRule 'OPRULE_Alex_RESTAPI-Test_R1' -RunCommand 'notepad' -RunProgramInItsContext $false
 ```
 
-### EXAMPLE 5
-```
+### Example 5
+
+```PowerShell
 Add-ExecuteProgramStep -OpRule 'OPRULE_Alex_RESTAPI-Test_R1' -RunCommand 'notepad' -ValidReturnCodes 0, 1603
 ```
 
-### EXAMPLE 6
-```
+### Example 6
+
+```PowerShell
 Add-ExecuteProgramStep -OpRule 'OPRULE_Alex_RESTAPI-Test_R1' -RunCommand 'notepad' -UseAShell $true
 ```
 
-### EXAMPLE 7
-```
+### Example 7
+
+```PowerShell
 Add-ExecuteProgramStep -OpRule 'OPRULE_Alex_RESTAPI-Test_R1' -RunCommand 'notepad' -OnFail Succeed
 ```
 
-### EXAMPLE 8
-```
+### Example 8
+
+```PowerShell
 Add-ExecuteProgramStep -OpRule 'OPRULE_Alex_RESTAPI-Test_R1' -RunCommand 'notepad' -OnSuccess Fail
 ```
 
-### EXAMPLE 9
-```
+### Example 9
+
+```PowerShell
 Add-ExecuteProgramStep -OpRule 'OPRULE_Alex_RESTAPI-Test_R1' -RunCommand 'notepad' -Notes 'This was created from the API'
 ```
 
 ## PARAMETERS
 
 ### -OpRule
+
 The OpRule to add the step to
 
 ```yaml
@@ -87,6 +99,7 @@ Accept wildcard characters: False
 ```
 
 ### -RunCommand
+
 The Run Command for the step
 
 ```yaml
@@ -102,6 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### -WaitforEndofExecution
+
 Forces the step to wait until the command has finished executing before going to the next step
 
 ```yaml
@@ -117,6 +131,7 @@ Accept wildcard characters: False
 ```
 
 ### -BackgroundMode
+
 Runs the command in background mode
 
 ```yaml
@@ -132,6 +147,7 @@ Accept wildcard characters: False
 ```
 
 ### -RunProgramInItsContext
+
 Runs the command in its context
 
 ```yaml
@@ -147,6 +163,7 @@ Accept wildcard characters: False
 ```
 
 ### -ValidReturnCodes
+
 The return codes from the run command to count as successes
 
 ```yaml
@@ -162,6 +179,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseAShell
+
 Runs the command in a shell
 
 ```yaml
@@ -177,6 +195,7 @@ Accept wildcard characters: False
 ```
 
 ### -OnFail
+
 What to do if the step fails
 Allowable values are: 'Continue', 'Fail', 'Succeed'
 
@@ -193,6 +212,7 @@ Accept wildcard characters: False
 ```
 
 ### -OnSuccess
+
 What to do if the step succeeds
 Allowable values are: 'Continue', 'Fail', 'Succeed'
 
@@ -209,6 +229,7 @@ Accept wildcard characters: False
 ```
 
 ### -Notes
+
 The notes to add to the step
 
 ```yaml
@@ -224,6 +245,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProgressAction
+
 {{ Fill ProgressAction Description }}
 
 ```yaml
@@ -239,17 +261,23 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### BCMAPI.Object.OpRule
+
 ### Bool
+
 ### Int
+
 ### String
+
 ## OUTPUTS
 
 ### StepAssignment
+
 ## NOTES
 
 ## RELATED LINKS

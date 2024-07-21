@@ -8,49 +8,57 @@ schema: 2.0.0
 # Add-SteptoOpRule
 
 ## SYNOPSIS
+
 Add a step to an OpRule
 
 ## SYNTAX
 
-```
+```text
 Add-SteptoOpRule [-OpRule] <OpRule> [-StepType] <StepType> [[-OnFail] <String>] [[-OnSuccess] <String>]
  [[-Verification] <String>] [[-Notes] <String>] [[-StepParameters] <StepParameter[]>]
  [-ProgressAction <ActionPreference>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 {{ Fill in the Description }}
 
 ## EXAMPLES
 
-### EXAMPLE 1
-```
+### Example 1
+
+```PowerShell
 Add-SteptoOpRule -OpRule OPRULE_Alex_RESTAPI-Test_R1 -StepType $StepType
 ```
 
-### EXAMPLE 2
-```
+### Example 2
+
+```PowerShell
 Add-SteptoOpRule -OpRule OPRULE_Alex_RESTAPI-Test_R1 -StepType $StepType -StepParameters $StepParameters -OnFail Succeed
 ```
 
-### EXAMPLE 3
-```
+### Example 3
+
+```PowerShell
 Add-SteptoOpRule -OpRule OPRULE_Alex_RESTAPI-Test_R1 -StepType $StepType -StepParameters $StepParameters -OnSuccess Succeed
 ```
 
-### EXAMPLE 4
-```
+### Example 4
+
+```PowerShell
 Add-SteptoOpRule -OpRule OPRULE_Alex_RESTAPI-Test_R1 -StepType $StepType -StepParameters $StepParameters -Verification FailSucceed
 ```
 
-### EXAMPLE 5
-```
+### Example 5
+
+```PowerShell
 Add-SteptoOpRule -OpRule OPRULE_Alex_RESTAPI-Test_R1 -StepType $StepType -StepParameters $StepParameters -Notes 'This step is here because xyz'
 ```
 
 ## PARAMETERS
 
 ### -OpRule
+
 The OpRule to add the step to
 
 ```yaml
@@ -66,6 +74,7 @@ Accept wildcard characters: False
 ```
 
 ### -StepType
+
 The step type to add to the OpRule
 
 ```yaml
@@ -81,6 +90,7 @@ Accept wildcard characters: False
 ```
 
 ### -OnFail
+
 What to do if the step fails
 Allowable values are: 'Continue', 'Fail', 'Succeed'
 
@@ -97,6 +107,7 @@ Accept wildcard characters: False
 ```
 
 ### -OnSuccess
+
 What to do if the step succeeds
 Allowable values are: 'Continue', 'Fail', 'Succeed'
 
@@ -113,6 +124,7 @@ Accept wildcard characters: False
 ```
 
 ### -Verification
+
 The setting for the step verification
 
 Allowable values are:
@@ -143,6 +155,7 @@ Accept wildcard characters: False
 ```
 
 ### -Notes
+
 The notes to add to the step
 
 ```yaml
@@ -158,6 +171,7 @@ Accept wildcard characters: False
 ```
 
 ### -StepParameters
+
 The parameters for the new step.
 If this is not used, then the new step is created with all the default values and sample text.
 
@@ -174,6 +188,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProgressAction
+
 {{ Fill ProgressAction Description }}
 
 ```yaml
@@ -189,18 +204,25 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### BCMAPI.Object.OpRule
+
 ### BCMAPI.StepType
+
 ### BCMAPI.StepParameter
+
 ### String
+
 ## OUTPUTS
 
 ### StepAssignment
+
 ## NOTES
+
 There is no way to set the succeed or fail condition to go to to a step.
 To do that you have to use this function to create the command, then use Update-OpRuleStepResultCondition to set the success or fail condition to "Go to Step _"
 

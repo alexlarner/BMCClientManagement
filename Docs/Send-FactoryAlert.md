@@ -8,48 +8,56 @@ schema: 2.0.0
 # Send-FactoryAlert
 
 ## SYNOPSIS
+
 Sends an email with the subject prepended with "Factory Alert"
 
 ## SYNTAX
 
-```
+```text
 Send-FactoryAlert [-Body] <String> [-Subject] <String> [[-SubjectPrefix] <String>] [[-Sender] <String>]
  [[-Recipient] <String[]>] [[-LogPath] <String>] [-ProgressAction <ActionPreference>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 A detailed description of the Send-FactoryAlert function.
 
 ## EXAMPLES
 
-### EXAMPLE 1
-```
+### Example 1
+
+```PowerShell
 Send-FactoryAlert -Body 'No datastores are attached to vdihost7002c' -Subject 'Missing Factory Host Datastores'
 ```
 
-### EXAMPLE 2
-```
+### Example 2
+
+```PowerShell
 Send-FactoryAlert -Body 'No datastores are attached to vdihost7002c' -Subject 'Missing Factory Host Datastores' -SubjectPrefix 'AUTOMATED FACTORY ALERT'
 ```
 
-### EXAMPLE 3
-```
+### Example 3
+
+```PowerShell
 Send-FactoryAlert -Body 'No datastores are attached to vdihost7002c' -Subject 'Missing Factory Host Datastores' -Sender "John.Smith@$CompanyDomainName"
 ```
 
-### EXAMPLE 4
-```
+### Example 4
+
+```PowerShell
 Send-FactoryAlert -Body 'No datastores are attached to vdihost7002c' -Subject 'Missing Factory Host Datastores' -Recipient "Jane.Doe@$CompanyDomainName"
 ```
 
-### EXAMPLE 5
-```
+### Example 5
+
+```PowerShell
 Send-FactoryAlert -Body 'No datastores are attached to vdihost7002c' -Subject 'Missing Factory Host Datastores' -LogPath "$ITNetworkShare\AutomatedFactory\Logs\Trim VM Build Script\TrimVMBuild_amfap0p_2020-02-07__14-45-02.log"
 ```
 
 ## PARAMETERS
 
 ### -Body
+
 The body of text for the email
 
 ```yaml
@@ -65,6 +73,7 @@ Accept wildcard characters: False
 ```
 
 ### -Subject
+
 A description of the Subject parameter.
 
 ```yaml
@@ -80,6 +89,7 @@ Accept wildcard characters: False
 ```
 
 ### -SubjectPrefix
+
 The prefix to prepend the subject with
 
 ```yaml
@@ -95,6 +105,7 @@ Accept wildcard characters: False
 ```
 
 ### -Sender
+
 The email address to send
 
 ```yaml
@@ -110,6 +121,7 @@ Accept wildcard characters: False
 ```
 
 ### -Recipient
+
 The email address for the recipient
 
 ```yaml
@@ -125,6 +137,7 @@ Accept wildcard characters: False
 ```
 
 ### -LogPath
+
 The path to the relevant factory log, to be reference at the end of the email
 
 ```yaml
@@ -140,6 +153,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProgressAction
+
 {{ Fill ProgressAction Description }}
 
 ```yaml
@@ -155,11 +169,13 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### String
+
 ## OUTPUTS
 
 ## NOTES

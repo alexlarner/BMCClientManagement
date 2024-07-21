@@ -8,33 +8,38 @@ schema: 2.0.0
 # Remove-OpRuleAssignment
 
 ## SYNOPSIS
+
 Removes the assignment of a Device to an OpRule
 
 ## SYNTAX
 
-```
+```text
 Remove-OpRuleAssignment [-Assignment] <OpRuleAssignment[]> [[-Activation] <String>]
  [-ProgressAction <ActionPreference>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 {{ Fill in the Description }}
 
 ## EXAMPLES
 
-### EXAMPLE 1
-```
+### Example 1
+
+```PowerShell
 Remove-OpRuleAssignment -Assignment $OpRuleAssignment
 ```
 
-### EXAMPLE 2
-```
+### Example 2
+
+```PowerShell
 Remove-OpRuleAssignment -Assignment $OpRuleAssignment -Activation manual
 ```
 
 ## PARAMETERS
 
 ### -Assignment
+
 The operational rule assignment to remove
 
 ```yaml
@@ -50,6 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -Activation
+
 Whether or not the unaassignment is to be effective immediately (automatic), or in a paused state (manual)
 Allowable values are: automatic and manual
 
@@ -66,6 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProgressAction
+
 {{ Fill ProgressAction Description }}
 
 ```yaml
@@ -81,11 +88,13 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### BCMAPI.Assignment.OpRuleAssignment
+
 ## OUTPUTS
 
 ## NOTES

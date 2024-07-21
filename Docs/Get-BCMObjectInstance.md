@@ -8,35 +8,40 @@ schema: 2.0.0
 # Get-BCMObjectInstance
 
 ## SYNOPSIS
+
 Gathers the instances of a particular object type that matches the specified attribute value
 
 ## SYNTAX
 
-```
+```text
 Get-BCMObjectInstance [-ObjectType] <ObjectType> [[-Source] <String>] [-Attribute] <ObjectTypeAttribute>
  [-Value] <String[]> [-ProgressAction <ActionPreference>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 Translates the front end operator name to the backend operator name
 Updates the 'Objects Found' parameter value to the proper formatting the API call, if used
 Gathers the object instances
 
 ## EXAMPLES
 
-### EXAMPLE 1
-```
+### Example 1
+
+```PowerShell
 Get-BCMObjectInstance -ObjectType '_DB_OBJECTTYPE_OPERATIONALRULE_' -Attribute $OpRuleNameObjectTypeAttribute -Value '%Reader%'
 ```
 
-### EXAMPLE 2
-```
+### Example 2
+
+```PowerShell
 Get-BCMObjectInstance -ObjectType '_DB_OBJECTTYPE_DEVICE_' -Attribute $DeviceNameObjectTypeAttribute -Value 'VDPKG0001' -Source Topology
 ```
 
 ## PARAMETERS
 
 ### -ObjectType
+
 The object type to use
 
 ```yaml
@@ -52,6 +57,7 @@ Accept wildcard characters: False
 ```
 
 ### -Source
+
 The place in BMC to search.
 Allowable values are 'All', 'Hierarchy', 'Objects Found', and 'Topology' (Topology is what is used for devices)
 
@@ -68,6 +74,7 @@ Accept wildcard characters: False
 ```
 
 ### -Attribute
+
 The BCM object type attribute
 
 ```yaml
@@ -83,6 +90,7 @@ Accept wildcard characters: False
 ```
 
 ### -Value
+
 The value that you want to search off of.
 If you want to do a wildcard search, the only allowable wildcard is '%', which matches zero or more characters
 See https://docs.bmc.com/docs/bcm129/searching-objects-869555770.html#Searchingobjects-Advancesearch
@@ -100,6 +108,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProgressAction
+
 {{ Fill ProgressAction Description }}
 
 ```yaml
@@ -115,16 +124,21 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### BCMAPI.ObjectType
+
 ### BCMAPI.ObjectTypeAttribute
+
 ### String
+
 ## OUTPUTS
 
 ### System.Management.Automation.PSObject
+
 ## NOTES
 
 ## RELATED LINKS

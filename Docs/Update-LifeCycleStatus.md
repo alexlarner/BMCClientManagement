@@ -8,28 +8,32 @@ schema: 2.0.0
 # Update-LifeCycleStatus
 
 ## SYNOPSIS
+
 Updates the BCM life cycle status of a device
 
 ## SYNTAX
 
-```
+```text
 Update-LifeCycleStatus [-Device] <Device[]> [-LifeCycleStatus] <String> [-ProgressAction <ActionPreference>]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 {{ Fill in the Description }}
 
 ## EXAMPLES
 
-### EXAMPLE 1
-```
+### Example 1
+
+```PowerShell
 Update-LifeCycleStatus -Device 'VDPKG0011' -LifeCycleStatus 'Production'
 ```
 
 ## PARAMETERS
 
 ### -Device
+
 The device to use
 
 ```yaml
@@ -45,6 +49,7 @@ Accept wildcard characters: False
 ```
 
 ### -LifeCycleStatus
+
 The new Life Cycle Status
 
 ```yaml
@@ -60,6 +65,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProgressAction
+
 {{ Fill ProgressAction Description }}
 
 ```yaml
@@ -75,12 +81,15 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### BCMAPI.Device
+
 ### String
+
 ## OUTPUTS
 
 ## NOTES

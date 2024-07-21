@@ -8,38 +8,44 @@ schema: 2.0.0
 # Update-CMDBStatus
 
 ## SYNOPSIS
+
 Creates a CMDB update csv in the specified folder
 
 ## SYNTAX
 
-```
+```text
 Update-CMDBStatus [-DeviceNames] <String[]> [[-CMDBstatus] <Int32>] [[-CMDBUpdateFolder] <String>]
  [-ProgressAction <ActionPreference>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 {{ Fill in the Description }}
 
 ## EXAMPLES
 
-### EXAMPLE 1
-```
+### Example 1
+
+```PowerShell
 Update-CMDBStatus -DeviceNames 'VDPKG0001'
 ```
 
-### EXAMPLE 2
-```
+### Example 2
+
+```PowerShell
 Update-CMDBStatus -DeviceNames 'VDPKG0001' -CMDBStatus 3
 ```
 
-### EXAMPLE 3
-```
+### Example 3
+
+```PowerShell
 Update-CMDBStatus -DeviceNames 'VDPKG0001' -CMDBUpdateFolder "\\$CompanyDomainName\apps\Prod\JTS\Factory"
 ```
 
 ## PARAMETERS
 
 ### -DeviceNames
+
 The names of the new devices to use
 
 ```yaml
@@ -55,6 +61,7 @@ Accept wildcard characters: False
 ```
 
 ### -CMDBstatus
+
 The CMDB status number to update the devices with
 
 ```yaml
@@ -70,6 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -CMDBUpdateFolder
+
 The folder to place the update CSV in
 
 ```yaml
@@ -85,6 +93,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProgressAction
+
 {{ Fill ProgressAction Description }}
 
 ```yaml
@@ -100,6 +109,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -107,6 +117,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ## NOTES
+
 2020.12.15 - Updated function to handle the type entries for physical devices
 
 ## RELATED LINKS

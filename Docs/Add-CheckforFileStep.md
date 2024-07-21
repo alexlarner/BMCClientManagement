@@ -8,48 +8,56 @@ schema: 2.0.0
 # Add-CheckforFileStep
 
 ## SYNOPSIS
+
 Adds a check for file step to an OpRule
 
 ## SYNTAX
 
-```
+```text
 Add-CheckforFileStep [-OpRule] <OpRule> [-FilePath] <String> [[-OnFail] <String>] [[-OnSuccess] <String>]
  [[-Verification] <String>] [[-Notes] <String>] [-ProgressAction <ActionPreference>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 {{ Fill in the Description }}
 
 ## EXAMPLES
 
-### EXAMPLE 1
-```
+### Example 1
+
+```PowerShell
 Add-CheckforFileStep -OpRule 'OPRULE_Alex_RestAPI-Test_R1' -FilePath 'C:\Windows\System32\notepad.exe'
 ```
 
-### EXAMPLE 2
-```
+### Example 2
+
+```PowerShell
 Add-CheckforFileStep -OpRule 'OPRULE_Alex_RestAPI-Test_R1' -FilePath 'C:\Windows\System32\notepad.exe' -OnFail 'Continue'
 ```
 
-### EXAMPLE 3
-```
+### Example 3
+
+```PowerShell
 Add-CheckforFileStep -OpRule 'OPRULE_Alex_RestAPI-Test_R1' -FilePath 'C:\Windows\System32\notepad.exe' -OnSuccess 'Fail'
 ```
 
-### EXAMPLE 4
-```
+### Example 4
+
+```PowerShell
 Add-CheckforFileStep -OpRule 'OPRULE_Alex_RestAPI-Test_R1' -FilePath 'C:\Windows\System32\notepad.exe' -Verification 'SuccessContinue'
 ```
 
-### EXAMPLE 5
-```
+### Example 5
+
+```PowerShell
 Add-CheckforFileStep -OpRule 'OPRULE_Alex_RestAPI-Test_R1' -FilePath 'C:\Windows\System32\notepad.exe' -Notes 'Created by BCM Rest API'
 ```
 
 ## PARAMETERS
 
 ### -OpRule
+
 The OpRule to add the step to
 
 ```yaml
@@ -65,6 +73,7 @@ Accept wildcard characters: False
 ```
 
 ### -FilePath
+
 The path of the file to check for
 
 ```yaml
@@ -80,6 +89,7 @@ Accept wildcard characters: False
 ```
 
 ### -OnFail
+
 What to do if the step fails
 Allowable values are: 'Continue', 'Fail', 'Succeed'
 
@@ -96,6 +106,7 @@ Accept wildcard characters: False
 ```
 
 ### -OnSuccess
+
 What to do if the step succeeds
 Allowable values are: 'Continue', 'Fail', 'Succeed'
 
@@ -112,6 +123,7 @@ Accept wildcard characters: False
 ```
 
 ### -Verification
+
 The setting for the step verification
 
 Allowable values are:
@@ -142,6 +154,7 @@ Accept wildcard characters: False
 ```
 
 ### -Notes
+
 The notes to add to the step
 
 ```yaml
@@ -157,6 +170,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProgressAction
+
 {{ Fill ProgressAction Description }}
 
 ```yaml
@@ -172,6 +186,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS

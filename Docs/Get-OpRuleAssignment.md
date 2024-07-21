@@ -8,60 +8,71 @@ schema: 2.0.0
 # Get-OpRuleAssignment
 
 ## SYNOPSIS
+
 Get assignments of devices to Operational Rules
 
 ## SYNTAX
 
 ### Normal (Default)
-```
+
+```text
 Get-OpRuleAssignment [-OpRule] <OpRule[]> [[-Device] <Device[]>] [-Status <String>]
  [-DeviceGroup <DeviceGroup>] [-ProgressAction <ActionPreference>] [<CommonParameters>]
 ```
 
 ### Raw
-```
+
+```text
 Get-OpRuleAssignment [-OpRule] <OpRule[]> [[-Device] <Device[]>] [-RawData]
  [-ProgressAction <ActionPreference>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 {{ Fill in the Description }}
 
 ## EXAMPLES
 
-### EXAMPLE 1
-```
+### Example 1
+
+```PowerShell
 Get-OpRuleAssignment -OpRule 'OPRULE_CrowdStrike_CrowdStrikeWindowsSensor_R14'
 ```
 
-### EXAMPLE 2
-```
+### Example 2
+
+```PowerShell
 Get-OpRuleAssignment -OpRule 'OPRULE_Symantec_SEP_R12' -Device 'VDPKG0011'
 ```
 
-### EXAMPLE 3
-```
+### Example 3
+
+```PowerShell
 Get-OpRuleAssignment -OpRule 'OPRULE_Symantec_SEP_R12' -Device 'VDPKG0011' -RawData
 ```
 
-### EXAMPLE 4
-```
+### Example 4
+
+```PowerShell
 Get-OpRuleAssignment -OpRule 'OPRULE_LastPass_LastPass_R6' -Status 'Execution Failed'
 ```
 
-### EXAMPLE 5
-```
+### Example 5
+
+```PowerShell
 Get-OpRuleAssignment -OpRule 'OPRULE_VMware_HorizonAgent-Tools_R12' -DeviceGroup 'GRP900_VMware_HorizonAgent-Tools_NOW'
 ```
 
-### EXAMPLE 6
-```
+### Example 6
+
+```PowerShell
 Get-OpRuleAssignment -OpRule 'OPRULE_Cortado_ThinPrintDesktopAgent_R6' -DeviceGroup 'GRP900_Cortado_ThinPrintDesktopAgent_NEW' -Status 'Executed'
 ```
 
 ## PARAMETERS
 
 ### -OpRule
+
 The Operational Rule to use
 
 ```yaml
@@ -77,6 +88,7 @@ Accept wildcard characters: False
 ```
 
 ### -Device
+
 The device that you want to filter the OpRule assignments down to.
 
 ```yaml
@@ -92,6 +104,7 @@ Accept wildcard characters: False
 ```
 
 ### -Status
+
 The front end status that you want to filter the OpRule assignments down to.
 Allowable values are:
 Assigned, Assignment Paused, Assignment Sent, Assignment Waiting, Executed, Execution Failed, Not Received, Ready to Run, Reassignment Waiting, Sending Impossible, Unassignment Paused, Unassignment Waiting, Update Sent, Update Waiting, Updated, Verification Failed
@@ -109,6 +122,7 @@ Accept wildcard characters: False
 ```
 
 ### -DeviceGroup
+
 The device group that you want to filter the OpRule assignments down to.
 
 ```yaml
@@ -124,6 +138,7 @@ Accept wildcard characters: False
 ```
 
 ### -RawData
+
 This returns the raw API response, without any property flattening or value translations
 
 ```yaml
@@ -139,6 +154,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProgressAction
+
 {{ Fill ProgressAction Description }}
 
 ```yaml
@@ -154,6 +170,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -161,7 +178,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### OpRule
+
 ### System.Management.Automation.PSObject
+
 ## NOTES
 
 ## RELATED LINKS

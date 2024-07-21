@@ -8,16 +8,18 @@ schema: 2.0.0
 # Get-DeviceFactoryRunSummary
 
 ## SYNOPSIS
+
 Gathers the latest factory run csv log for a given build type for a given machine
 
 ## SYNTAX
 
-```
+```text
 Get-DeviceFactoryRunSummary [-Name] <String[]> [[-BuildType] <String>] [-StatusFilter <String>]
  [-FactoryRunLogFolder <String>] [-ProgressAction <ActionPreference>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 This function:
 	Gathers the csv files directly (no recursion) in the path specified in the FactoryRunLogFolder parameter
 	For each device:
@@ -27,29 +29,34 @@ This function:
 
 ## EXAMPLES
 
-### EXAMPLE 1
-```
+### Example 1
+
+```PowerShell
 Get-DeviceFactoryRunSummary -Name VD0021868
 ```
 
-### EXAMPLE 2
-```
+### Example 2
+
+```PowerShell
 Get-DeviceFactoryRunSummary -Name VD0022169 -BuildType OPS
 ```
 
-### EXAMPLE 3
-```
+### Example 3
+
+```PowerShell
 Get-DeviceFactoryRunSummary -Name VD0022169 -BuildType OPS -StatusFilter Failed
 ```
 
-### EXAMPLE 4
-```
+### Example 4
+
+```PowerShell
 Get-DeviceFactoryRunSummary -Name VD0022169 -BuildType OPS -StatusFilter Failed -FactoryRunLogFolder "$ITNetworkShare\AutomatedFactory\Logs\Factory Run Script\Device Factory Run Summary CSVs"
 ```
 
 ## PARAMETERS
 
 ### -Name
+
 The name of the device to gather the log for
 
 ```yaml
@@ -65,6 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -BuildType
+
 The build type to filter on for the device/s.
 Options are Base, Base_Laptop, Base_DesktopandThinClient, Base_Packaging, Base_PhysicalServer, Base_VirtualServer, Cocoon, CycleHarvester, DataScience, JNAM, OPS, SIGDeveloper
 
@@ -81,6 +89,7 @@ Accept wildcard characters: False
 ```
 
 ### -StatusFilter
+
 The OpRule status grouping to filter the factory steps down to
 
 ```yaml
@@ -96,6 +105,7 @@ Accept wildcard characters: False
 ```
 
 ### -FactoryRunLogFolder
+
 A description of the FactoryRunLogFolder parameter.
 Options are:
 	All: Assigned, Assignment Paused, Assignment Planned, Assignment Sent, Assignment Waiting, Available, Deleted, Dependency Check Failed, Dependency Check Requested, Dependency Check Successful, Disabled, Executed, Execution Failed, Not Received, Obsolete, Package Missing, Package Requested, Package Sent, Publication Planned, Publication Sent, Publication Waiting, Published, Ready to run, Reassignment Waiting, Reboot Pending, Sending impossible, Step Missing, Step Requested, Step Sent, Unassigned, Unassignment Paused, Unassignment Sent, Unassignment Waiting, Uninstalled, Update Paused, Update Planned, Update Sent, Update Waiting, Updated, Verification Failed, Verification Requested, Verified, Waiting for Operational Rule
@@ -121,6 +131,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProgressAction
+
 {{ Fill ProgressAction Description }}
 
 ```yaml
@@ -136,6 +147,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -143,6 +155,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ## NOTES
+
 01.20.2021 - Alex Larner - Created function
 
 ## RELATED LINKS

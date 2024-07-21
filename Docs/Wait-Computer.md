@@ -8,38 +8,44 @@ schema: 2.0.0
 # Wait-Computer
 
 ## SYNOPSIS
+
 Wait for a new computer to appear in BCM or Active Directory
 
 ## SYNTAX
 
-```
+```text
 Wait-Computer [-ComputerName] <String[]> [-System] <Object> [[-MaxWaitTimeMinutes] <Int32>]
  [[-RefreshIntervalSeconds] <Int32>] [-ProgressAction <ActionPreference>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 {{ Fill in the Description }}
 
 ## EXAMPLES
 
-### EXAMPLE 1
-```
+### Example 1
+
+```PowerShell
 Wait-Computer -ComputerName VD0030000 -System 'Active Directory'
 ```
 
-### EXAMPLE 2
-```
+### Example 2
+
+```PowerShell
 Wait-Computer -ComputerName VD0030000 -System 'Active Directory' -MaxWaitTimeMinutes 60
 ```
 
-### EXAMPLE 3
-```
+### Example 3
+
+```PowerShell
 Wait-Computer -ComputerName VD0030000 -System 'BMC Client Management' -RefreshIntervalSeconds 120
 ```
 
 ## PARAMETERS
 
 ### -ComputerName
+
 The name of the device to look for
 
 ```yaml
@@ -55,6 +61,7 @@ Accept wildcard characters: False
 ```
 
 ### -System
+
 The system to look for the device in: 'Active Directory' or 'BMC Client Management'
 
 ```yaml
@@ -70,6 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaxWaitTimeMinutes
+
 The maximum amount of time that you want to wait for the device to appear
 
 ```yaml
@@ -85,6 +93,7 @@ Accept wildcard characters: False
 ```
 
 ### -RefreshIntervalSeconds
+
 The amount of seconds between checks for the device
 
 ```yaml
@@ -100,6 +109,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProgressAction
+
 {{ Fill ProgressAction Description }}
 
 ```yaml
@@ -115,15 +125,19 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### Int
+
 ### String
+
 ## OUTPUTS
 
 ## NOTES
+
 This does not use the Active Directory module, instead it adds the 'System.DirectoryServices.AccountManagement' assembly to do the Active Directory lookup
 
 ## RELATED LINKS

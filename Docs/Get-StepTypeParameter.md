@@ -8,66 +8,78 @@ schema: 2.0.0
 # Get-StepTypeParameter
 
 ## SYNOPSIS
+
 Gathers the parameters for a given step type
 
 ## SYNTAX
 
 ### All (Default)
-```
+
+```text
 Get-StepTypeParameter [-StepType] <StepType[]> [-ProgressAction <ActionPreference>] [<CommonParameters>]
 ```
 
 ### ByID
-```
+
+```text
 Get-StepTypeParameter [-StepType] <StepType[]> [-ID] <Int32[]> [-ProgressAction <ActionPreference>]
  [<CommonParameters>]
 ```
 
 ### ByLabel
-```
+
+```text
 Get-StepTypeParameter [-StepType] <StepType[]> [-Label] <String[]> [-ProgressAction <ActionPreference>]
  [<CommonParameters>]
 ```
 
 ### ByFrontEndLabel
-```
+
+```text
 Get-StepTypeParameter [-StepType] <StepType[]> [-FrontEndLabel] <String[]> [-ProgressAction <ActionPreference>]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 Gathers the parameters and casts them into a Step Parameter object
 
 ## EXAMPLES
 
-### EXAMPLE 1
-```
+### Example 1
+
+```PowerShell
 Get-StepTypeParameter -StepType $StepType
 ```
 
-### EXAMPLE 2
-```
+### Example 2
+
+```PowerShell
 Get-StepTypeParameter -StepType _DB_STEPNAME_DELETEDIRECTORY_ -ID 5025
 ```
 
-### EXAMPLE 3
-```
+### Example 3
+
+```PowerShell
 Get-StepTypeParameter -StepType '_DB_STEPNAME_REGISTRYMANAGEMENT_' -Label '_DB_STEPPARAM_REGISTRYKEY_'
 ```
 
-### EXAMPLE 4
-```
+### Example 4
+
+```PowerShell
 Get-StepTypeParameter -StepType '_DB_STEPNAME_RUNPROGRAM_' -FrontEndLabel 'Executable Path'
 ```
 
-### EXAMPLE 5
-```
+### Example 5
+
+```PowerShell
 Get-StepTypeParameter -StepType '_DB_STEPNAME_COPYFILE_' -FrontEndLabel '*Path*'
 ```
 
 ## PARAMETERS
 
 ### -StepType
+
 The step type object to use
 If this is the only parameter used, all the parameters for the object type will be returned.
 
@@ -84,6 +96,7 @@ Accept wildcard characters: False
 ```
 
 ### -ID
+
 The ID of the step type parameter
 This is unique to the step type and the parameter (i.e.
 the ID for the Executable Path parameter of an Execute Program step will be different from the Name property of a Executable Path parameter of an Execute Program as User step)
@@ -102,6 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### -Label
+
 The value of the label property on the step parameter
 Use this only if you want to filter the parameters down to ones with a particular label
 
@@ -118,6 +132,7 @@ Accept wildcard characters: True
 ```
 
 ### -FrontEndLabel
+
 The front end label of the parameter, generally the same name as in the GUI
 Use this only if you want to filter the parameters down to ones with a particular front end label
 
@@ -134,6 +149,7 @@ Accept wildcard characters: True
 ```
 
 ### -ProgressAction
+
 {{ Fill ProgressAction Description }}
 
 ```yaml
@@ -149,17 +165,23 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### BCMAPI.StepType
+
 ### Int
+
 ### String
+
 ## OUTPUTS
 
 ### StepTypeParameter
+
 ## NOTES
+
 The Label property is used because the Name property does not use the usual BCM backend name, and does not translate properly to the front end name using BCMs own internal translation.
 Why BMC decided to make the name property values on these objects different from the majority of their object types, remains to be seen.
 

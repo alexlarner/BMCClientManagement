@@ -8,33 +8,38 @@ schema: 2.0.0
 # Get-BCMCommonObject
 
 ## SYNOPSIS
+
 Gathers a BCM Object
 
 ## SYNTAX
 
-```
+```text
 Get-BCMCommonObject [-Name] <String[]> [-ObjectType] <String> [-ProgressAction <ActionPreference>]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 {{ Fill in the Description }}
 
 ## EXAMPLES
 
-### EXAMPLE 1
-```
+### Example 1
+
+```PowerShell
 Get-BCMCommonObject -Name VDPKG0001 -ObjectType Device
 ```
 
-### EXAMPLE 2
-```
+### Example 2
+
+```PowerShell
 Get-BCMCommonObject -Name 'OPRULE_CrowdStrike_CrowdStrikeWindowsSensor_R%' -ObjectType 'Operational Rule'
 ```
 
 ## PARAMETERS
 
 ### -Name
+
 The name of the object
 If you want to do a wildcard search, the only allowable wildcard is '%', which matches zero or more characters
 
@@ -51,6 +56,7 @@ Accept wildcard characters: True
 ```
 
 ### -ObjectType
+
 The front end name of the object type.
 Allowable values are Device, Device Group, Operational Rule, Operational Rule Folder, Package
 
@@ -67,6 +73,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProgressAction
+
 {{ Fill ProgressAction Description }}
 
 ```yaml
@@ -82,20 +89,29 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### String
+
 ## OUTPUTS
 
 ### Device
+
 ### DeviceGroup
+
 ### OpRule
+
 ### OpRuleFolder
+
 ### Package
+
 ### MSIPackage
+
 ### CustomPackage
+
 ## NOTES
 
 ## RELATED LINKS

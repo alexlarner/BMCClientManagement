@@ -8,17 +8,19 @@ schema: 2.0.0
 # Build-FactoryDevice
 
 ## SYNOPSIS
+
 Runs a group of devices through a factory build type
 
 ## SYNTAX
 
-```
+```text
 Build-FactoryDevice [[-DeviceCSVPath] <String>] [[-FactoryDefinitions] <String>] [[-Reassign] <String>]
  [[-RefreshInterval] <Int32>] [[-MaxOpRuleRetries] <Int32>] [-NovSphere] [-ProgressAction <ActionPreference>]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 Imports the Factory definitions CSV
 Sets the reassignable statuses variable relative to the Reassign parameter selection
 Test to see if the factory OpRules and device groups exist and are assigned to each other for the build types needed
@@ -56,34 +58,40 @@ Else wait for the number of the seconds specified by the RefreshInterval
 
 ## EXAMPLES
 
-### EXAMPLE 1
-```
+### Example 1
+
+```PowerShell
 Build-FactoryDevice -DeviceCSVPath "$ITNetworkShare\AutomatedFactory\Logs\BMC Factory Run CSVs\FactoryBuild_2020-02-06__14-11-02_xbz1219.csv"
 ```
 
-### EXAMPLE 2
-```
+### Example 2
+
+```PowerShell
 Build-FactoryDevice -DeviceCSVPath "$ITNetworkShare\AutomatedFactory\Logs\BMC Factory Run CSVs\FactoryBuild_2020-02-10__11-23-27_amfap0p.csv" -FactoryDefinitions "$ITNetworkShare\AutomatedFactory\Factory Definitions Archive\FactoryDefinitions_R33.csv"
 ```
 
-### EXAMPLE 3
-```
+### Example 3
+
+```PowerShell
 Build-FactoryDevice -DeviceCSVPath "$ITNetworkShare\AutomatedFactory\Logs\BMC Factory Run CSVs\FactoryBuild_2020-02-03__08-39-41_xbz1219.csv" -Reassign 'All'
 ```
 
-### EXAMPLE 4
-```
+### Example 4
+
+```PowerShell
 Build-FactoryDevice -DeviceCSVPath "$ITNetworkShare\AutomatedFactory\Logs\BMC Factory Run CSVs\FactoryBuild_2020-01-31__09-46-08_xbz1219.csv" -RefreshInterval 60
 ```
 
-### EXAMPLE 5
-```
+### Example 5
+
+```PowerShell
 Build-FactoryDevice -DeviceCSVPath "$ITNetworkShare\AutomatedFactory\Logs\BMC Factory Run CSVs\FactoryBuild_2020-02-04__19-04-51_amfap0p.csv" -MaxOpRuleRetries 2
 ```
 
 ## PARAMETERS
 
 ### -DeviceCSVPath
+
 The path to the CSV containing the device name and factory build to apply
 
 ```yaml
@@ -99,6 +107,7 @@ Accept wildcard characters: False
 ```
 
 ### -FactoryDefinitions
+
 The path to the Factory Definitions CSV
 
 ```yaml
@@ -114,6 +123,7 @@ Accept wildcard characters: False
 ```
 
 ### -Reassign
+
 Reassign the device if it has the specified OpRule assignment status
 Allowable values are: 'All', 'ExecutionFailed', 'None', 'NonSuccessful'
 
@@ -130,6 +140,7 @@ Accept wildcard characters: False
 ```
 
 ### -RefreshInterval
+
 The amount of time between checks for OpRule status updates
 
 ```yaml
@@ -145,6 +156,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaxOpRuleRetries
+
 The amount of OpRule attempts to make for each OpRule on each device if it is not successfull
 
 ```yaml
@@ -160,6 +172,7 @@ Accept wildcard characters: False
 ```
 
 ### -NovSphere
+
 {{ Fill NovSphere Description }}
 
 ```yaml
@@ -175,6 +188,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProgressAction
+
 {{ Fill ProgressAction Description }}
 
 ```yaml
@@ -190,16 +204,21 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### String
+
 ### Int
+
 ## OUTPUTS
 
 ### System.Management.Automation.PSObject
+
 ## NOTES
+
 This creates a log in "$ITNetworkShare\AutomatedFactory\Logs\Factory Run Script" with a title that includes the function start time, initiator's username, and BMC environment being used
 
 ## RELATED LINKS

@@ -8,40 +8,46 @@ schema: 2.0.0
 # Use-BCMRestAPI
 
 ## SYNOPSIS
+
 Makes authenticated RestAPI calls to the BMC Server
 
 ## SYNTAX
 
-```
+```text
 Use-BCMRestAPI [-URL] <String> [-Method <String>] [-Body <String>] [-ProgressAction <ActionPreference>]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 Uses Invoke-RestMethod and encrypted credentials stored in $EncryptedCredentialsPath to make API calls.
 Bypasses the certificate check.
 Errors out if the HTTP response code is something other than 200
 
 ## EXAMPLES
 
-### EXAMPLE 1
-```
+### Example 1
+
+```PowerShell
 Use-BCMRestAPI -URL '/package/packages'
 ```
 
-### EXAMPLE 2
-```
+### Example 2
+
+```PowerShell
 Use-BCMRestAPI -URL "/device/1252/session" -Method PUT
 ```
 
-### EXAMPLE 3
-```
+### Example 3
+
+```PowerShell
 Use-BCMRestAPI -URL '/i18n/keywords' -Body '{ "keywords": [ "MODIFICATIONDATE", "PUBLISHSTATUS" ] }' -Method POST
 ```
 
 ## PARAMETERS
 
 ### -URL
+
 The portion of the URL for the BCM API call after "https://$ServerPort/api/1"
 
 ```yaml
@@ -57,6 +63,7 @@ Accept wildcard characters: False
 ```
 
 ### -Method
+
 HTTP methods: GET, DELETE, PATCH, POST, or PUT
 
 ```yaml
@@ -72,6 +79,7 @@ Accept wildcard characters: False
 ```
 
 ### -Body
+
 Use this if you need to send a body with your API call, generally only used with POST methods
 
 ```yaml
@@ -87,6 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProgressAction
+
 {{ Fill ProgressAction Description }}
 
 ```yaml
@@ -102,6 +111,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS

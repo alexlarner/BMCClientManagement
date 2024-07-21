@@ -8,28 +8,32 @@ schema: 2.0.0
 # Add-DevicetoDeviceGroup
 
 ## SYNOPSIS
+
 Adds a device to a Device Group
 
 ## SYNTAX
 
-```
+```text
 Add-DevicetoDeviceGroup [-Device] <Device[]> [-DeviceGroup] <DeviceGroup> [-ProgressAction <ActionPreference>]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 {{ Fill in the Description }}
 
 ## EXAMPLES
 
-### EXAMPLE 1
-```
+### Example 1
+
+```PowerShell
 Add-DevicetoDeviceGroup -Device 'VDPKG0009' -DeviceGroup 'APPGRP_Adobe_Reader_CUR'
 ```
 
 ## PARAMETERS
 
 ### -Device
+
 The device to use
 
 ```yaml
@@ -45,6 +49,7 @@ Accept wildcard characters: False
 ```
 
 ### -DeviceGroup
+
 The device group to use
 
 ```yaml
@@ -60,6 +65,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProgressAction
+
 {{ Fill ProgressAction Description }}
 
 ```yaml
@@ -75,12 +81,15 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### BCMAPI.Device
+
 ### BCMAPI.Object.DeviceGroup
+
 ## OUTPUTS
 
 ## NOTES

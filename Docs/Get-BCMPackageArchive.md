@@ -8,27 +8,31 @@ schema: 2.0.0
 # Get-BCMPackageArchive
 
 ## SYNOPSIS
+
 Looks for the ZIP file of the package install media in the Vision64Database folder on the BCM server
 
 ## SYNTAX
 
-```
+```text
 Get-BCMPackageArchive [-Package] <Package[]> [-ProgressAction <ActionPreference>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 {{ Fill in the Description }}
 
 ## EXAMPLES
 
-### EXAMPLE 1
-```
+### Example 1
+
+```PowerShell
 Get-BCMPackageArchive -Package $BCMPackage
 ```
 
 ## PARAMETERS
 
 ### -Package
+
 The package to use
 
 ```yaml
@@ -44,6 +48,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProgressAction
+
 {{ Fill ProgressAction Description }}
 
 ```yaml
@@ -59,16 +64,21 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### BCMAPI.Object.Package
+
 ### BCMAPI.Object.Package.CustomPackage
+
 ### BCMAPI.Object.Package.MSIPackage
+
 ## OUTPUTS
 
 ### System.IO.FileInfo
+
 ## NOTES
 
 ## RELATED LINKS

@@ -8,64 +8,75 @@ schema: 2.0.0
 # Add-RegistryKeyVerificationStep
 
 ## SYNOPSIS
+
 Adds a registry key verification step
 
 ## SYNTAX
 
-```
+```text
 Add-RegistryKeyVerificationStep [-OpRule] <OpRule> [-Key] <String> [[-Property] <String>] [[-Value] <String>]
  [[-BinaryKeyinHexNotation] <Boolean>] [[-OnFail] <String>] [[-OnSuccess] <String>] [[-Verification] <String>]
  [[-Notes] <String>] [-ProgressAction <ActionPreference>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 {{ Fill in the Description }}
 
 ## EXAMPLES
 
-### EXAMPLE 1
-```
+### Example 1
+
+```PowerShell
 Add-RegistryKeyVerificationStep -OpRule 'OPRULE_VMware_HorizonAgent-Tools_R14' -Key 'HKEY_LOCAL_MACHINE\SOFTWARE\JTS'
 ```
 
-### EXAMPLE 2
-```
+### Example 2
+
+```PowerShell
 Add-RegistryKeyVerificationStep -OpRule 'OPRULE_VMware_HorizonAgent-Tools_R14' -Key 'HKEY_LOCAL_MACHINE\SOFTWARE\JTS' -Property 'VMwareAgentToolsRebootCounter'
 ```
 
-### EXAMPLE 3
-```
+### Example 3
+
+```PowerShell
 Add-RegistryKeyVerificationStep -OpRule 'OPRULE_VMware_HorizonAgent-Tools_R14' -Key 'HKEY_LOCAL_MACHINE\SOFTWARE\JTS' -Property 'VMwareAgentToolsRebootCounter' -Value 2
 ```
 
-### EXAMPLE 4
-```
+### Example 4
+
+```PowerShell
 Add-RegistryKeyVerificationStep -OpRule 'OPRULE_VMware_HorizonAgent-Tools_R14' -Key 'HKEY_LOCAL_MACHINE\SOFTWARE\JTS' -Property 'VMwareAgentToolsRebootCounter' -Value 0 -BinaryKeyinHexNotation $true
 ```
 
-### EXAMPLE 5
-```
+### Example 5
+
+```PowerShell
 Add-RegistryKeyVerificationStep -OpRule 'OPRULE_VMware_HorizonAgent-Tools_R14' -Key 'HKEY_LOCAL_MACHINE\SOFTWARE\JTS' -OnFail Succeed
 ```
 
-### EXAMPLE 6
-```
+### Example 6
+
+```PowerShell
 Add-RegistryKeyVerificationStep -OpRule 'OPRULE_VMware_HorizonAgent-Tools_R14' -Key 'HKEY_LOCAL_MACHINE\SOFTWARE\JTS' -OnSuccess Fail
 ```
 
-### EXAMPLE 7
-```
+### Example 7
+
+```PowerShell
 Add-RegistryKeyVerificationStep -OpRule 'OPRULE_VMware_HorizonAgent-Tools_R14' -Key 'HKEY_LOCAL_MACHINE\SOFTWARE\JTS' -Verification 'SuccessSucceed'
 ```
 
-### EXAMPLE 8
-```
+### Example 8
+
+```PowerShell
 Add-RegistryKeyVerificationStep -OpRule 'OPRULE_VMware_HorizonAgent-Tools_R14' -Key 'HKEY_LOCAL_MACHINE\SOFTWARE\JTS' -Notes 'Created with the BCM API'
 ```
 
 ## PARAMETERS
 
 ### -OpRule
+
 The OpRule to add the step to
 
 ```yaml
@@ -81,6 +92,7 @@ Accept wildcard characters: False
 ```
 
 ### -Key
+
 The full registry key path
 
 ```yaml
@@ -96,6 +108,7 @@ Accept wildcard characters: False
 ```
 
 ### -Property
+
 The registry key property name to check for
 If this is left blank, the step needs to be opened in the GUI, and the sample text deleted, because the API does not properly set a blank value.
 
@@ -112,6 +125,7 @@ Accept wildcard characters: False
 ```
 
 ### -Value
+
 The value of registry key property to check for.
 This must be used with the property
 If this is left blank, the step needs to be opened in the GUI, and the sample text deleted, because the API does not properly set a blank value.
@@ -129,6 +143,7 @@ Accept wildcard characters: False
 ```
 
 ### -BinaryKeyinHexNotation
+
 Interprets the hex notated value as a binary value
 
 ```yaml
@@ -144,6 +159,7 @@ Accept wildcard characters: False
 ```
 
 ### -OnFail
+
 What to do if the step fails
 Allowable values are: 'Continue', 'Fail', 'Succeed'
 
@@ -160,6 +176,7 @@ Accept wildcard characters: False
 ```
 
 ### -OnSuccess
+
 What to do if the step succeeds
 Allowable values are: 'Continue', 'Fail', 'Succeed'
 
@@ -176,6 +193,7 @@ Accept wildcard characters: False
 ```
 
 ### -Verification
+
 The setting for the step verification
 
 Allowable values are:
@@ -206,6 +224,7 @@ Accept wildcard characters: False
 ```
 
 ### -Notes
+
 The notes to add to the step
 
 ```yaml
@@ -221,6 +240,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProgressAction
+
 {{ Fill ProgressAction Description }}
 
 ```yaml
@@ -236,6 +256,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS

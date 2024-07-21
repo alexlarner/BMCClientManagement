@@ -8,59 +8,69 @@ schema: 2.0.0
 # Add-CheckforStringinFileStep
 
 ## SYNOPSIS
+
 Adds a check for string in file step
 
 ## SYNTAX
 
-```
+```text
 Add-CheckforStringinFileStep [-OpRule] <OpRule> [-FilePath] <String> [-String] <String>
  [[-ErrorIfFound] <Boolean>] [[-MatchCase] <Boolean>] [[-OnFail] <String>] [[-OnSuccess] <String>]
  [[-Verification] <String>] [[-Notes] <String>] [-ProgressAction <ActionPreference>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 {{ Fill in the Description }}
 
 ## EXAMPLES
 
-### EXAMPLE 1
-```
+### Example 1
+
+```PowerShell
 Add-CheckforStringinFileStep -OpRule $value1 -FilePath 'C:\ProgramData\EnterpriseMode\EnterpriseMode.XML' -String '<site-list version="63">'
 ```
 
-### EXAMPLE 2
-```
+### Example 2
+
+```PowerShell
 Add-CheckforStringinFileStep -OpRule $value1 -FilePath 'C:\ProgramData\EnterpriseMode\EnterpriseMode.XML' -String '<site-list version="63">' -ErrorIfFound $true
 ```
 
-### EXAMPLE 3
-```
+### Example 3
+
+```PowerShell
 Add-CheckforStringinFileStep -OpRule $value1 -FilePath 'C:\ProgramData\EnterpriseMode\EnterpriseMode.XML' -String '<site-list version="63">' -MatchCase $true
 ```
 
-### EXAMPLE 4
-```
+### Example 4
+
+```PowerShell
 Add-CheckforStringinFileStep -OpRule $value1 -FilePath 'C:\ProgramData\EnterpriseMode\EnterpriseMode.XML' -String '<site-list version="63">' -OnFail 'Continue'
 ```
 
-### EXAMPLE 5
-```
+### Example 5
+
+```PowerShell
 Add-CheckforStringinFileStep -OpRule $value1 -FilePath 'C:\ProgramData\EnterpriseMode\EnterpriseMode.XML' -String '<site-list version="63">' -OnSuccess 'Fail'
 ```
 
-### EXAMPLE 6
-```
+### Example 6
+
+```PowerShell
 Add-CheckforStringinFileStep -OpRule $value1 -FilePath 'C:\ProgramData\EnterpriseMode\EnterpriseMode.XML' -String '<site-list version="63">' -Verification 'FailContinue'
 ```
 
-### EXAMPLE 7
-```
+### Example 7
+
+```PowerShell
 Add-CheckforStringinFileStep -OpRule $value1 -FilePath 'C:\ProgramData\EnterpriseMode\EnterpriseMode.XML' -String '<site-list version="63">' -Notes 'Made using the BCM Rest API'
 ```
 
 ## PARAMETERS
 
 ### -OpRule
+
 The OpRule to add the step to
 
 ```yaml
@@ -76,6 +86,7 @@ Accept wildcard characters: False
 ```
 
 ### -FilePath
+
 The path of the file to check inside of
 
 ```yaml
@@ -91,6 +102,7 @@ Accept wildcard characters: False
 ```
 
 ### -String
+
 The string to check for inside the file
 
 ```yaml
@@ -106,6 +118,7 @@ Accept wildcard characters: False
 ```
 
 ### -ErrorIfFound
+
 Sets the step to error out if the string is found
 
 ```yaml
@@ -121,6 +134,7 @@ Accept wildcard characters: False
 ```
 
 ### -MatchCase
+
 Forces the lookup to match the case of the given string
 
 ```yaml
@@ -136,6 +150,7 @@ Accept wildcard characters: False
 ```
 
 ### -OnFail
+
 What to do if the step fails
 Allowable values are: 'Continue', 'Fail', 'Succeed'
 
@@ -152,6 +167,7 @@ Accept wildcard characters: False
 ```
 
 ### -OnSuccess
+
 What to do if the step succeeds
 Allowable values are: 'Continue', 'Fail', 'Succeed'
 
@@ -168,6 +184,7 @@ Accept wildcard characters: False
 ```
 
 ### -Verification
+
 The setting for the step verification
 
 Allowable values are:
@@ -198,6 +215,7 @@ Accept wildcard characters: False
 ```
 
 ### -Notes
+
 The notes to add to the step
 
 ```yaml
@@ -213,6 +231,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProgressAction
+
 {{ Fill ProgressAction Description }}
 
 ```yaml
@@ -228,6 +247,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS

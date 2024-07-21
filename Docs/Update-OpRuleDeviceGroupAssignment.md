@@ -8,11 +8,12 @@ schema: 2.0.0
 # Update-OpRuleDeviceGroupAssignment
 
 ## SYNOPSIS
+
 {{ Fill in the Synopsis }}
 
 ## SYNTAX
 
-```
+```text
 Update-OpRuleDeviceGroupAssignment [-Assignment] <OpRuleDeviceGroupAssignment[]> [[-AssignEnableTime] <Int32>]
  [[-AssignmentActivation] <Boolean>] [[-BypassTransferWindow] <Boolean>] [[-InstallationType] <Boolean>]
  [[-RunAsCurrentUser] <Boolean>] [[-RunWhileExecutionFails] <Boolean>] [[-ScheduleID] <Int32>]
@@ -22,11 +23,13 @@ Update-OpRuleDeviceGroupAssignment [-Assignment] <OpRuleDeviceGroupAssignment[]>
 ```
 
 ## DESCRIPTION
+
 {{ Fill in the Description }}
 
 ## EXAMPLES
 
 ### Example 1
+
 ```powershell
 PS C:\> {{ Add example code here }}
 ```
@@ -36,6 +39,7 @@ PS C:\> {{ Add example code here }}
 ## PARAMETERS
 
 ### -AssignEnableTime
+
 {{ Fill AssignEnableTime Description }}
 
 ```yaml
@@ -51,6 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -Assignment
+
 {{ Fill Assignment Description }}
 
 ```yaml
@@ -66,6 +71,7 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentActivation
+
 {{ Fill AssignmentActivation Description }}
 
 ```yaml
@@ -81,6 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### -BypassTransferWindow
+
 {{ Fill BypassTransferWindow Description }}
 
 ```yaml
@@ -96,6 +103,7 @@ Accept wildcard characters: False
 ```
 
 ### -InstallationType
+
 {{ Fill InstallationType Description }}
 
 ```yaml
@@ -111,6 +119,7 @@ Accept wildcard characters: False
 ```
 
 ### -RunAsCurrentUser
+
 {{ Fill RunAsCurrentUser Description }}
 
 ```yaml
@@ -126,6 +135,7 @@ Accept wildcard characters: False
 ```
 
 ### -RunWhileExecutionFails
+
 {{ Fill RunWhileExecutionFails Description }}
 
 ```yaml
@@ -141,6 +151,7 @@ Accept wildcard characters: False
 ```
 
 ### -ScheduleID
+
 {{ Fill ScheduleID Description }}
 
 ```yaml
@@ -156,6 +167,7 @@ Accept wildcard characters: False
 ```
 
 ### -SpecialCase
+
 {{ Fill SpecialCase Description }}
 
 ```yaml
@@ -171,6 +183,7 @@ Accept wildcard characters: False
 ```
 
 ### -UploadIntermediaryStatusValues
+
 {{ Fill UploadIntermediaryStatusValues Description }}
 
 ```yaml
@@ -186,6 +199,7 @@ Accept wildcard characters: False
 ```
 
 ### -UploadStatusAfterEveryExecution
+
 {{ Fill UploadStatusAfterEveryExecution Description }}
 
 ```yaml
@@ -201,6 +215,7 @@ Accept wildcard characters: False
 ```
 
 ### -WakeupDevices
+
 {{ Fill WakeupDevices Description }}
 
 ```yaml
@@ -216,6 +231,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProgressAction
+
 {{ Fill ProgressAction Description }}
 
 ```yaml
@@ -231,14 +247,17 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### OpRuleDeviceGroupAssignment[]
+
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS

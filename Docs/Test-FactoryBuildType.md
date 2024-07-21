@@ -8,27 +8,31 @@ schema: 2.0.0
 # Test-FactoryBuildType
 
 ## SYNOPSIS
+
 Tests to see if the Factory Device Groups & Factory OpRules exist and are assigned to each other
 
 ## SYNTAX
 
-```
+```text
 Test-FactoryBuildType [[-FactoryBuildType] <String>] [-ProgressAction <ActionPreference>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 {{ Fill in the Description }}
 
 ## EXAMPLES
 
-### EXAMPLE 1
-```
+### Example 1
+
+```PowerShell
 Test-FactoryBuildType -FactoryBuildType 'Base'
 ```
 
 ## PARAMETERS
 
 ### -FactoryBuildType
+
 The Factory Build type to test.
 Allowable values are 'Base', 'Base_Laptop', 'Base_DesktopandThinClient', 'Base_Packaging', 'Base_PhysicalServer', 'Base_VirtualServer', 'Cocoon', 'CycleHarvester', 'DataScience', 'JNAM', 'OPS', 'SIGDeveloper'
 
@@ -45,6 +49,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProgressAction
+
 {{ Fill ProgressAction Description }}
 
 ```yaml
@@ -60,14 +65,17 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### String
+
 ## OUTPUTS
 
 ### System.Boolean
+
 ## NOTES
 
 ## RELATED LINKS

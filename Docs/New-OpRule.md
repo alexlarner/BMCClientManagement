@@ -8,33 +8,38 @@ schema: 2.0.0
 # New-OpRule
 
 ## SYNOPSIS
+
 Create a new blank OpRule with no steps
 
 ## SYNTAX
 
-```
+```text
 New-OpRule [-Name] <String[]> [-OpRuleFolder] <OpRuleFolder> [-ProgressAction <ActionPreference>]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 {{ Fill in the Description }}
 
 ## EXAMPLES
 
-### EXAMPLE 1
-```
+### Example 1
+
+```PowerShell
 New-OpRule -Name 'OPRULE_Sample_Test_R1'
 ```
 
-### EXAMPLE 2
-```
+### Example 2
+
+```PowerShell
 New-OpRule -Name 'OPRULE_Sample_Test_R1' -OpRuleFolder 'Engineers'
 ```
 
 ## PARAMETERS
 
 ### -Name
+
 The name to use for the new OpRule
 
 ```yaml
@@ -50,6 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -OpRuleFolder
+
 The operational rule folder to place the new operational rule in
 Default is the '_OPRULES_FOR_APPLICATION_DEPLOYMENT_DEVICE_GROUPS' folder
 
@@ -66,6 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProgressAction
+
 {{ Fill ProgressAction Description }}
 
 ```yaml
@@ -81,15 +88,19 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### BCMAPI.Object.OpRuleFolder
+
 ### String
+
 ## OUTPUTS
 
 ### OpRule
+
 ## NOTES
 
 ## RELATED LINKS

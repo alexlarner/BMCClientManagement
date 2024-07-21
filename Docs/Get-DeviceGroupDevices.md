@@ -8,16 +8,18 @@ schema: 2.0.0
 # Get-DeviceGroupDevices
 
 ## SYNOPSIS
+
 Gathers the devices assigned to a particular device group and returns them in the specified format
 
 ## SYNTAX
 
-```
+```text
 Get-DeviceGroupDevices [-DeviceGroup] <DeviceGroup[]> [-IDOnly] [-ProgressAction <ActionPreference>]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 Gathers the devices assigned to a device group
 By default this just returns the ID, Name, Notes and Created Date
 But if DeviceDetails or IDOnly are chosen, a different API call is made to grab just the IDs of the devices assigned to the device group
@@ -25,19 +27,22 @@ if DeviceDetails is chosen in the ResultType parameter, the full device properti
 
 ## EXAMPLES
 
-### EXAMPLE 1
-```
+### Example 1
+
+```PowerShell
 Get-DeviceGroupDevices -DeviceGroup $DeviceGroup
 ```
 
-### EXAMPLE 2
-```
+### Example 2
+
+```PowerShell
 Get-DeviceGroupDevices -DeviceGroup $DeviceGroup -IDOnly
 ```
 
 ## PARAMETERS
 
 ### -DeviceGroup
+
 The device group to use
 
 ```yaml
@@ -53,6 +58,7 @@ Accept wildcard characters: False
 ```
 
 ### -IDOnly
+
 Use if you'd like the function to return just the Device IDs
 
 ```yaml
@@ -68,6 +74,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProgressAction
+
 {{ Fill ProgressAction Description }}
 
 ```yaml
@@ -83,15 +90,19 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### BCMAPI.Object.DeviceGroup
+
 ## OUTPUTS
 
 ### Device
+
 ### System.Int32
+
 ## NOTES
 
 ## RELATED LINKS

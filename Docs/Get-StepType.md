@@ -8,53 +8,63 @@ schema: 2.0.0
 # Get-StepType
 
 ## SYNOPSIS
+
 Returns a step type object from the StepTypes variable
 
 ## SYNTAX
 
 ### ByName (Default)
-```
+
+```text
 Get-StepType [-Name] <String[]> [-ProgressAction <ActionPreference>] [<CommonParameters>]
 ```
 
 ### ByID
-```
+
+```text
 Get-StepType [-ID] <Int32[]> [-ProgressAction <ActionPreference>] [<CommonParameters>]
 ```
 
 ### ByFrontEndName
-```
+
+```text
 Get-StepType [-FrontEndName] <String[]> [-ProgressAction <ActionPreference>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 {{ Fill in the Description }}
 
 ## EXAMPLES
 
-### EXAMPLE 1
-```
+### Example 1
+
+```PowerShell
 Get-StepType -ID 1613
 ```
 
-### EXAMPLE 2
-```
+### Example 2
+
+```PowerShell
 Get-StepType -Name '_DB_STEPNAME_WAIT_'
 ```
 
-### EXAMPLE 3
-```
+### Example 3
+
+```PowerShell
 Get-StepType -FrontEndName 'Execute Program'
 ```
 
-### EXAMPLE 4
-```
+### Example 4
+
+```PowerShell
 Get-StepType -FrontEndName 'Registry*'
 ```
 
 ## PARAMETERS
 
 ### -ID
+
 The ID of the step type
 This is particular to the revision of the step and therefore can be different between BCM revisions
 
@@ -71,6 +81,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+
 The backend BMC database name, from the name property of the step type object
 
 ```yaml
@@ -86,6 +97,7 @@ Accept wildcard characters: True
 ```
 
 ### -FrontEndName
+
 The front end name of the step type, generally the same name as in the GUI
 
 ```yaml
@@ -101,6 +113,7 @@ Accept wildcard characters: True
 ```
 
 ### -ProgressAction
+
 {{ Fill ProgressAction Description }}
 
 ```yaml
@@ -116,15 +129,19 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### String
+
 ### Int
+
 ## OUTPUTS
 
 ### StepType
+
 ## NOTES
 
 ## RELATED LINKS
