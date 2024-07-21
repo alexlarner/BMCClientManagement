@@ -130,7 +130,12 @@ Accept wildcard characters: False
 ### -OnFail
 
 What to do if the step fails
-Allowable values are: 'Continue', 'Fail', 'Succeed'
+
+Allowable values are:
+
+- Continue
+- Fail
+- Succeed
 
 ```yaml
 Type: String
@@ -147,7 +152,12 @@ Accept wildcard characters: False
 ### -OnSuccess
 
 What to do if the step succeeds
-Allowable values are: 'Continue', 'Fail', 'Succeed'
+
+Allowable values are:
+
+- Continue
+- Fail
+- Succeed
 
 ```yaml
 Type: String
@@ -172,22 +182,6 @@ Aliases:
 
 Required: False
 Position: 7
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ProgressAction
-
-{{ Fill ProgressAction Description }}
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: proga
-
-Required: False
-Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

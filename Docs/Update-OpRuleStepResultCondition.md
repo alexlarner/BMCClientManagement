@@ -82,7 +82,12 @@ Accept wildcard characters: False
 ### -Action
 
 What to do on step fail or success
-Allowable values are: 'Continue', 'Fail', 'Succeed'
+
+Allowable values are:
+
+- Continue
+- Fail
+- Succeed
 
 ```yaml
 Type: String
@@ -108,22 +113,6 @@ Aliases:
 Required: True
 Position: Named
 Default value: 0
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ProgressAction
-
-{{ Fill ProgressAction Description }}
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: proga
-
-Required: False
-Position: Named
-Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

@@ -92,7 +92,12 @@ Accept wildcard characters: False
 ### -OnFail
 
 What to do if the step fails
-Allowable values are: 'Continue', 'Fail', 'Succeed'
+
+Allowable values are:
+
+- Continue
+- Fail
+- Succeed
 
 ```yaml
 Type: String
@@ -109,7 +114,12 @@ Accept wildcard characters: False
 ### -OnSuccess
 
 What to do if the step succeeds
-Allowable values are: 'Continue', 'Fail', 'Succeed'
+
+Allowable values are:
+
+- Continue
+- Fail
+- Succeed
 
 ```yaml
 Type: String
@@ -128,19 +138,22 @@ Accept wildcard characters: False
 The setting for the step verification
 
 Allowable values are:
-	FailContinue (Loop while verification fails)
 
-	FailFail (Rule execution fails if the verification fails.)
+- FailContinue
+    - Loop while verification fails
+- FailFail
+    - Rule execution fails if the verification fails.
+- FailSucceed
+    - Rule successfully executes if the verification fails
+- SuccessContinue
+    - Loop while verification succeeds
+- SuccessFail
+    - Rule execution fails if the verification succeeds.
+- SuccessSucceed
+    - Rule successfully executes if the verification succeeds
+- None
+    - Do not perform verification
 
-	FailSucceed (Rule successfully executes if the verification fails)
-
-	SuccessContinue (Loop while verification succeeds)
-
-	SuccessFail (Rule execution fails if the verification succeeds.)
-
-	SuccessSucceed (Rule successfully executes if the verification succeeds)
-
-	None (Do not perform verification)
 
 ```yaml
 Type: String
@@ -182,22 +195,6 @@ Aliases:
 
 Required: False
 Position: 7
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ProgressAction
-
-{{ Fill ProgressAction Description }}
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: proga
-
-Required: False
-Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

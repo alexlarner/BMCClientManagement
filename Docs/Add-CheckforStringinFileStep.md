@@ -25,43 +25,43 @@ Add-CheckforStringinFileStep [-OpRule] <OpRule> [-FilePath] <String> [-String] <
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Add check for string in file step
 
 ```PowerShell
 Add-CheckforStringinFileStep -OpRule $value1 -FilePath 'C:\ProgramData\EnterpriseMode\EnterpriseMode.XML' -String '<site-list version="63">'
 ```
 
-### Example 2
+### Example 2: Add step that errors out if the string is found
 
 ```PowerShell
 Add-CheckforStringinFileStep -OpRule $value1 -FilePath 'C:\ProgramData\EnterpriseMode\EnterpriseMode.XML' -String '<site-list version="63">' -ErrorIfFound $true
 ```
 
-### Example 3
+### Example 3: Add step whose check is case-sensitive
 
 ```PowerShell
 Add-CheckforStringinFileStep -OpRule $value1 -FilePath 'C:\ProgramData\EnterpriseMode\EnterpriseMode.XML' -String '<site-list version="63">' -MatchCase $true
 ```
 
-### Example 4
+### Example 4: Add step that continues even if the string is not found
 
 ```PowerShell
 Add-CheckforStringinFileStep -OpRule $value1 -FilePath 'C:\ProgramData\EnterpriseMode\EnterpriseMode.XML' -String '<site-list version="63">' -OnFail 'Continue'
 ```
 
-### Example 5
+### Example 5: Add step that fails if the string is found
 
 ```PowerShell
 Add-CheckforStringinFileStep -OpRule $value1 -FilePath 'C:\ProgramData\EnterpriseMode\EnterpriseMode.XML' -String '<site-list version="63">' -OnSuccess 'Fail'
 ```
 
-### Example 6
+### Example 6: Add step that repeats until the string is found
 
 ```PowerShell
 Add-CheckforStringinFileStep -OpRule $value1 -FilePath 'C:\ProgramData\EnterpriseMode\EnterpriseMode.XML' -String '<site-list version="63">' -Verification 'FailContinue'
 ```
 
-### Example 7
+### Example 7: Add step with a note
 
 ```PowerShell
 Add-CheckforStringinFileStep -OpRule $value1 -FilePath 'C:\ProgramData\EnterpriseMode\EnterpriseMode.XML' -String '<site-list version="63">' -Notes 'Made using the BCM Rest API'
@@ -152,7 +152,12 @@ Accept wildcard characters: False
 ### -OnFail
 
 What to do if the step fails
-Allowable values are: 'Continue', 'Fail', 'Succeed'
+
+Allowable values are:
+
+- Continue
+- Fail
+- Succeed
 
 ```yaml
 Type: String
@@ -169,7 +174,12 @@ Accept wildcard characters: False
 ### -OnSuccess
 
 What to do if the step succeeds
-Allowable values are: 'Continue', 'Fail', 'Succeed'
+
+Allowable values are:
+
+- Continue
+- Fail
+- Succeed
 
 ```yaml
 Type: String
@@ -188,19 +198,22 @@ Accept wildcard characters: False
 The setting for the step verification
 
 Allowable values are:
-	FailContinue (Loop while verification fails)
 
-	FailFail (Rule execution fails if the verification fails.)
+- FailContinue
+    - Loop while verification fails
+- FailFail
+    - Rule execution fails if the verification fails.
+- FailSucceed
+    - Rule successfully executes if the verification fails
+- SuccessContinue
+    - Loop while verification succeeds
+- SuccessFail
+    - Rule execution fails if the verification succeeds.
+- SuccessSucceed
+    - Rule successfully executes if the verification succeeds
+- None
+    - Do not perform verification
 
-	FailSucceed (Rule successfully executes if the verification fails)
-
-	SuccessContinue (Loop while verification succeeds)
-
-	SuccessFail (Rule execution fails if the verification succeeds.)
-
-	SuccessSucceed (Rule successfully executes if the verification succeeds)
-
-	None (Do not perform verification)
 
 ```yaml
 Type: String
@@ -225,22 +238,6 @@ Aliases:
 
 Required: False
 Position: 9
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ProgressAction
-
-{{ Fill ProgressAction Description }}
-
-```yaml
-Type: ActionPreference
-Parameter Sets: (All)
-Aliases: proga
-
-Required: False
-Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
