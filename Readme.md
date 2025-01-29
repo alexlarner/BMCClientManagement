@@ -16,7 +16,7 @@ The "Automated Factory" automated the creation of all new user VMs in the compan
     - A “Factory” where “Base” build type VMs were created, built up to one of the other “trim” build types (Operations or Sales) as needed, and moved to the “Parking Lot” to refill as needed
     - A “Parking Lot” where VMs were ready for other IT teams to move off and assign to the new user
 - It consisted of 4 different scripts (Build Base VM, Convert Base VM into other builds, Refill Parking Lot from Factory, and Factory Status) that ran independently and could keep running if the other scripts were not functioning
-    - Those scripts utilized my [PowerShell API for BMC Client Management](https://github.com/alexlarner/BMCClientManagement) and VMware’s PowerShell API for vSphere ([PowerCLI](https://developer.broadcom.com/powercli))
+    - Those scripts utilized this API and VMware’s PowerShell API for vSphere ([PowerCLI](https://developer.broadcom.com/powercli))
 - VMs were balanced between datacenters, hosts, and datastores
 - It wrote logs documenting the status of each machine through the process
 - It emailed regular status updates of the VM build type counts & statuses to management
